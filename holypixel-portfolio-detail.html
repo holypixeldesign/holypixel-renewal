@@ -75,6 +75,11 @@
   .hero-visual{border:2px solid var(--ink);aspect-ratio:16/9;position:relative;display:grid;grid-template-columns:repeat(16,1fr);grid-template-rows:repeat(9,1fr);margin-bottom:50px}
   .hero-visual i{border:.5px solid rgba(255,255,255,.12)}
   .hero-visual .wm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:clamp(40px,9vw,120px);color:rgba(255,255,255,.16)}
+  .hero-visual .hv-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .hero-visual.has-photo i,.hero-visual.has-photo .wm{display:none}
+  /* 실제 이미지가 있을 땐 16:9로 자르지 않고 원본 비율 그대로 보여줌 (긴 상세페이지 이미지 대응) */
+  .hero-visual.has-photo{aspect-ratio:auto;display:block;border:none}
+  .hero-visual.has-photo .hv-photo{position:static;width:100%;height:auto;display:block;object-fit:unset}
 
   /* BODY GRID */
   .dbody{display:grid;grid-template-columns:1fr 320px;gap:48px;padding-bottom:60px}
@@ -102,6 +107,10 @@
   .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   @media(max-width:700px){.gal-grid{grid-template-columns:1fr}}
   .gal{border:2px solid var(--ink);aspect-ratio:4/3;position:relative;display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:repeat(7,1fr)}
+  /* 실제 추가 이미지가 여러 장 있을 때: 3열 그리드 대신 세로로 쭉 나열 */
+  .gal-grid.gal-photos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:700px){.gal-grid.gal-photos{grid-template-columns:1fr}}
+  .gal-photo{width:100%;height:auto;display:block}
   .gal i{border:.5px solid rgba(255,255,255,.12)}
 
   /* NAV BETWEEN */
@@ -201,9 +210,9 @@
   <div class="dbody">
     <div>
       <h2>프로젝트 개요</h2>
-      <p>브랜드가 전하고 싶은 핵심 메시지를 한 줄로 정리하는 것에서 시작했습니다. 타깃 고객, 사용 환경, 경쟁 브랜드를 함께 살펴보며 방향을 잡고, 메시지를 가장 또렷하게 전달하는 시각 언어를 설계했습니다.</p>
+      <p id="pOverview">브랜드가 전하고 싶은 핵심 메시지를 한 줄로 정리하는 것에서 시작했습니다. 타깃 고객, 사용 환경, 경쟁 브랜드를 함께 살펴보며 방향을 잡고, 메시지를 가장 또렷하게 전달하는 시각 언어를 설계했습니다.</p>
       <h2>디자인 접근</h2>
-      <p>컬러·타이포그래피·구도 등 모든 요소를 메시지와 전환을 중심으로 결정했습니다. 한눈에 들어오는 위계, 브랜드 톤을 살린 색감, 실제 인쇄·출력 환경까지 고려한 데이터로 완성도를 높였습니다.</p>
+      <p id="pApproach">컬러·타이포그래피·구도 등 모든 요소를 메시지와 전환을 중심으로 결정했습니다. 한눈에 들어오는 위계, 브랜드 톤을 살린 색감, 실제 인쇄·출력 환경까지 고려한 데이터로 완성도를 높였습니다.</p>
       <h2>결과물</h2>
       <p>최종 디자인은 다양한 채널(인쇄물·온라인·옥외)에서 일관된 인상을 주도록 가이드와 함께 전달되었습니다. 가로·세로 버전, 사이즈 변형까지 대응해 어디서든 바로 사용할 수 있습니다.</p>
     </div>
@@ -221,7 +230,7 @@
 <section class="gallery">
   <div class="wrap">
     <span class="eyebrow">Gallery</span>
-    <div class="gal-grid">
+    <div class="gal-grid" id="galGrid">
       <div class="gal" style="background:linear-gradient(150deg,var(--o-400),var(--orange))"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="gal" style="background:linear-gradient(150deg,var(--g-700),var(--ink))"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="gal" style="background:linear-gradient(150deg,var(--amber),var(--o-600))"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -298,6 +307,60 @@
     if(title){document.getElementById('pTitle').textContent=title;document.getElementById('bcTitle').textContent=title;document.title=title+' — 홀리픽셀';}
     if(code){document.getElementById('pCode').textContent=code;document.getElementById('pCodeText').textContent=code;document.getElementById('pCodeWm').textContent=code.split('-')[0];}
     if(cat){document.getElementById('pCat').textContent=cat;document.getElementById('pCatText').textContent=cat;}
+    // 프로젝트별 개요/디자인 접근 커스텀 텍스트 (code 기준)
+    var projectContent={
+      'BR-009':{
+        overview:'투명한 수분 캡슐과 청량한 하늘빛을 담은 진정 수분 앰플 브랜딩',
+        approach:'피부 온도를 낮추고 수분 리듬을 되찾는 순간을 시각화했습니다. 투명한 제형, 물방울, 얼음과 유리의 굴절감을 활용해 CALMDEW만의 시원하고 트렌디한 K-뷰티 이미지를 완성했습니다.'
+      },
+      'BR-010':{
+        overview:'Glossy Pink & Fig 입술 위에 부드럽게 녹아 흐르는 글로스의 광택과 유기적인 곡선을 시각화한 프리미엄 뷰티 브랜딩입니다. 로지 핑크 제형과 무화과의 깊은 베리 컬러를 활용해 촉촉함과 성숙한 관능미를 표현했습니다.',
+        approach:'뷰티 제품을 화장품을 넘어 감각적인 패션 오브제로 소비하는 20–30대. 트렌디한 패키지와 자연스러운 광택, 소장하고 싶은 디자인을 선호하는 고객을 타깃으로 합니다.'
+      },
+      'BR-011':{
+        overview:'볼드한 타이포와 스크립트 로고를 조합해 브랜드의 개성을 강조하고, 버건디와 소프트 블루 컬러를 활용해 클래식하면서도 트렌디한 카페 무드를 표현했습니다. 스트라이프 패턴과 패키지 시스템을 통해 일관된 브랜드 경험을 제공합니다.',
+        approach:'일상의 작은 쉼표가 되는 커피 스테이션. 로고부터 패키지, 굿즈, 유니폼, 매장까지 하나의 아이덴티티로 연결되는 통합 브랜딩을 기획했습니다.'
+      },
+      'BR-012':{
+        overview:'면발의 흐름을 닮은 유연한 로고 타입과 해처럼 빛나는 캐릭터로 완성한 경쾌한 라멘 브랜드입니다.',
+        approach:'\'면광\'은 한 그릇의 라멘이 주는 밝은 에너지를 모티브로, 친근한 캐릭터와 리드미컬한 그래픽을 담았습니다.'
+      },
+      'BR-013':{
+        overview:'레몬의 산뜻함과 크리미한 거품의 부드러움을 결합한 클렌징 브랜드 \'mellom\'입니다',
+        approach:'밝은 레몬 옐로 컬러와 여백 중심의 타이포그래피, 감각적인 제품 비주얼을 통해 깨끗하고 트렌디한 데일리 스킨케어 이미지를 표현했습니다.'
+      },
+      'BR-014':{
+        overview:'손끝에서 완성되는 향수. 발림과 동시에 은은하게 퍼지는 향으로 하루의 분위기를 완성하는 퍼퓸 핸드크림입니다. 마주보는 두 날개가 이어져 하나의 형태를 이루는 나비(Butterfly) 심볼로, 향이 손끝에서 피어올라 퍼져나가는 순간을 상징적으로 표현했습니다.',
+        approach:'세리프 로고타입과 앰보싱 그래픽으로 클래식하면서도 감각적인 뷰티 하우스의 무드를 담았습니다.'
+      },
+      'BR-006':{
+        overview:'절제된 우아함을 지향하는 프리미엄 컨템포러리 클로딩 브랜드입니다. 넘실거리는 리본의 매듭에서 영감을 받은 모노그램 심볼 \'M\'은 하나의 선이 끊김 없이 이어져 완성되며, 옷의 실루엣과 재봉선처럼 유려하게 흐르는 형태로 브랜드의 정체성을 담았습니다. 클래식 세리프 로고타입과 결합해 하이엔드 패션 하우스의 품격을 표현했으며, 행택·명함·라벨·패치·쇼핑백까지 전 접점에 통일된 톤앤매너를 적용해 브랜드 완성도를 높였습니다.',
+        approach:'더스티 블루 소재에 로고를 딥 엠보싱 처리해 브랜드의 무게감과 디테일을 강조했습니다. 라벨·패치는 패브릭 라벨, 자수 패치, 가죽 패치 등 소재별로 로고를 다르게 구현해 아이템 특성에 맞춘 유연한 활용성을 확보했고, 브랜드 컬러의 그로그랭 리본에는 로고와 모노그램을 반복 배치해 패키지 마감의 디테일을 강화했습니다. 반투명 포장백과 크래프트 톤 쇼핑백으로 언박싱 경험까지 브랜드 아이덴티티에 녹여냈습니다.'
+      },
+      'BR-007':{
+        overview:'세련된 와인 브랜딩, 와인을 마시는 순간을 하나의 기억으로 재해석한 브랜드입니다.',
+        approach:'엠블럼 로고를 활용하고 딥 버건디와 아이보리는 와인 본연의 색과 클래식한 무게감을 상징하는 대비로 깊이를 표현했습니다.'
+      },
+      'BR-008':{
+        overview:'레트로 감성의 캐릭터와 볼드한 워드마크를 중심으로, 패키지부터 유니폼, 굿즈, 매장 사인까지 하나의 브랜드 아이덴티티로 연결했습니다. 친근한 일러스트와 빈티지 무드를 통해 브랜드만의 개성을 완성했습니다.',
+        approach:'\'피자를 함께 즐기는 즐거움\'을 브랜드 경험으로 표현했습니다. 캐릭터를 중심으로 로고, 패키지, 의류, 스티커, 간판 등 다양한 접점에 일관된 디자인을 적용하여 기억에 남는 피자 브랜드를 구축했습니다.'
+      },
+      'BR-003':{
+        overview:'빵 부스러기를 유쾌한 조연으로 표현하고, 따뜻한 컬러와 캐릭터로 동네 친구 같은 카페 경험을 완성했습니다. CRUMB는 \'빵 부스러기\'처럼 작지만 일상에 즐거움을 더하는 조연을 모티브로, 언제든 편하게 찾을 수 있는 \'동네 친구\' 같은 카페를 표현했습니다.',
+        approach:'둥글고 묵직한 로고 타입과 손글씨, 크림·브라운·레드 컬러를 조합해 갓 구운 빵과 커피의 따뜻함을 친근하면서도 선명하게 전달합니다. 곳곳에 등장하는 장난기 어린 캐릭터와 부스러기 그래픽은 스티커·패키지·메뉴·사인물까지 유쾌하게 연결하며 CRUMB만의 기억하기 쉬운 브랜드 경험을 완성합니다'
+      },
+      'BR-004':{
+        overview:'빵과 사람의 친근함을 담은 커피 브랜딩. FIVE TABLES는 커피와 베이커리를 통해 사람들이 자연스럽게 모여 이야기를 나누는 공간을 담아낸 카페 브랜딩입니다.',
+        approach:'메인 컬러인 딥블루와 크림 베이지는 프리미엄 감성과 따뜻한 분위기를 표현했으며, 클래식한 로고와 손그림 캐릭터를 조합해 고급스러움과 친근함을 동시에 담았습니다. 또한 명함, 패키지, 컵, 유니폼 등 다양한 브랜드 굿즈에 동일한 디자인을 적용하여 일관된 브랜드 경험을 제공하고, 고객에게 기억에 남는 브랜드 아이덴티티를 전달하도록 기획했습니다.'
+      }
+    };
+    if(code && projectContent[code]){
+      var pc=projectContent[code];
+      var ov=document.getElementById('pOverview');
+      var ap=document.getElementById('pApproach');
+      if(ov) ov.textContent=pc.overview;
+      if(ap) ap.textContent=pc.approach;
+    }
     var from=q.get('from');
     if(from==='church'){var sec=document.getElementById('bcSection');sec.textContent='교회 디자인';sec.href='holypixel-church.html';var bl=document.getElementById('backList');bl.textContent='← 교회 디자인 목록으로';bl.href='holypixel-church.html';}
     // tint hero visual by category
@@ -307,6 +370,37 @@
     var f=document.createDocumentFragment();
     for(var i=0;i<16*9;i++){var el=document.createElement('i');f.appendChild(el);}
     hv.insertBefore(f, hv.firstChild);
+    // show the actual clicked photo(s), if passed from the portfolio list
+    var storedImgs=[];
+    try{
+      var raw=sessionStorage.getItem('pf_detail_imgs');
+      if(raw) storedImgs=JSON.parse(raw);
+    }catch(e){}
+    if(storedImgs.length){
+      var photo=document.createElement('img');
+      photo.className='hv-photo';
+      photo.alt=title||'포트폴리오 이미지';
+      photo.src=storedImgs[0];
+      hv.appendChild(photo);
+      hv.classList.add('has-photo');
+      // 추가 이미지가 있으면 갤러리 영역에 세로로 나열
+      if(storedImgs.length>1){
+        var galGrid=document.getElementById('galGrid');
+        if(galGrid){
+          galGrid.innerHTML='';
+          galGrid.classList.add('gal-photos');
+          for(var gi=1; gi<storedImgs.length; gi++){
+            var gImg=document.createElement('img');
+            gImg.className='gal-photo';
+            gImg.alt=(title||'포트폴리오')+' 이미지 '+(gi+1);
+            gImg.loading='lazy';
+            gImg.src=storedImgs[gi];
+            galGrid.appendChild(gImg);
+          }
+        }
+      }
+      try{ sessionStorage.removeItem('pf_detail_imgs'); }catch(e){}
+    }
   })();
 </script>
 </body>
