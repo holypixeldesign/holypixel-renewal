@@ -259,6 +259,7 @@
   section.section{padding:90px 0}
   @media(max-width:680px){section.section{padding:56px 0}}
   section.section.tint{background:var(--g-100)}
+  section.section.orange-bg{background:#FF5A00}
   section.section+section.section{border-top:2px solid var(--ink)}
 
   .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -290,9 +291,11 @@
   .bundle-card .desc{font-size:13.5px;color:var(--g-500);margin-bottom:22px}
   .bundle-price{font-size:32px;font-weight:900;letter-spacing:-.02em;margin-bottom:22px}
   .bundle-price .unit{font-size:15px;font-weight:700;margin-left:2px}
-  .bundle-list{list-style:none;padding:0;margin:0 0 28px;font-size:13.5px;color:var(--g-600);display:flex;flex-direction:column;gap:9px}
+  .bundle-list{list-style:none;padding:0;margin:0 0 20px;font-size:13.5px;color:var(--g-600);display:flex;flex-direction:column;gap:9px}
   .bundle-list li{display:flex;gap:8px}
   .bundle-list li::before{content:"·";color:var(--ink);font-weight:900}
+  .bundle-notes{margin:0 0 24px;padding-top:14px;border-top:1px dashed var(--g-300)}
+  .bundle-notes p{font-size:12.5px;color:#FF5A00;font-weight:700;margin-bottom:4px}
   .bundle-card .btn{margin-top:auto;width:100%;justify-content:center}
 
   .criteria-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--ink);border:2px solid var(--ink)}
@@ -319,6 +322,15 @@
     .flow-step{width:100%;max-width:320px}
   }
 
+  /* ===== PROCESS 8-STEP GRID ===== */
+  .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:860px){.proc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.proc-grid{grid-template-columns:1fr}}
+  .proc-card{border:2px solid var(--ink);background:var(--white);padding:26px}
+  .proc-num{font-family:var(--mono);font-weight:600;font-size:13px;background:var(--ink);color:#fff;padding:4px 9px;display:inline-block;margin-bottom:14px}
+  .proc-card h3{font-size:15.5px;font-weight:600;margin-bottom:10px}
+  .proc-card p{font-size:13px;color:var(--g-500);line-height:1.65}
+
   .pricing-note{font-family:var(--mono);font-size:12px;color:var(--g-400);margin-top:34px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.8}
 
   .tier-list{list-style:none;padding:0;margin-top:auto;display:flex;flex-direction:column;gap:9px}
@@ -329,37 +341,11 @@
   .price-card.dark .tier-list li{border-top-color:rgba(255,255,255,.2)}
   .price-card.dark .tier-list li span{color:var(--g-300)}
 
-  .cat-tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
-  .cat-tab{font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.03em;padding:14px 26px;border:2px solid var(--ink);background:var(--white);cursor:pointer;transition:transform .12s,box-shadow .12s,background .2s,color .2s}
-  .cat-tab:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
-  .cat-tab.active{background:var(--ink);color:#fff;box-shadow:4px 4px 0 var(--o-500)}
-  @media(max-width:560px){.cat-tab{flex:1 1 calc(50% - 6px);text-align:center;padding:12px 8px;font-size:13px}}
-
-  .cat-panel{border:2px solid var(--ink);background:var(--white);padding:40px;display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
-  @media(max-width:760px){.cat-panel{grid-template-columns:1fr;padding:28px}}
-  .cat-panel.fade-in{animation:catFade .3s ease}
-  @keyframes catFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .cp-head .cat{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink)}
-  .cp-head h3{font-size:26px;font-weight:900;margin:8px 0 10px;letter-spacing:-.02em}
-  .cp-head p{font-size:14px;color:var(--g-500);line-height:1.6}
-  .cp-items{list-style:none;padding:0;margin:0;display:flex;flex-direction:column}
-  .cp-item{padding:20px 0;border-top:1px dashed var(--g-300)}
-  .cp-item:first-child{border-top:none;padding-top:0}
-  .cp-item-top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .cp-name{font-size:16px;font-weight:800;color:var(--ink)}
-  .cp-price{font-size:20px;font-weight:900;white-space:nowrap}
-  .cp-price .was{font-size:13px;font-weight:700;color:var(--g-400);text-decoration:line-through;margin-right:7px}
-  .cp-note{font-family:var(--mono);font-size:12px;color:var(--g-500);margin-top:7px}
-  .cp-includes{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:5px}
-  .cp-includes li{font-size:13px;color:var(--g-600);display:flex;gap:7px;line-height:1.5}
-  .cp-includes li::before{content:"+";color:var(--ink);font-weight:900}
-  .cp-recommend{margin-top:12px;font-size:13px;color:var(--o-600);font-weight:700;background:var(--o-50);padding:9px 12px;border-left:3px solid var(--o-500);line-height:1.5}
-  .cp-footnote{list-style:none;padding:16px 0 0;margin:20px 0 0;border-top:2px solid var(--ink);display:flex;flex-direction:column;gap:6px;grid-column:1/-1}
-  .cp-footnote li{font-family:var(--mono);font-size:11.5px;color:var(--g-500);display:flex;gap:7px;line-height:1.6}
-  .cp-footnote li::before{content:"*";color:var(--ink);font-weight:900}
-  .bundle-price .was{display:block;font-size:15px;font-weight:700;color:var(--g-400);text-decoration:line-through;margin-bottom:2px}
-  .price-tag .was{display:block;font-size:14px;font-weight:700;color:var(--g-400);text-decoration:line-through;margin-bottom:2px}
-  .price-card.dark .price-tag .was{color:var(--g-500)}
+  /* ===== SERVICE TABS ===== */
+  .svc-tabs{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap}
+  .svc-tab{font-family:var(--sans);font-weight:700;font-size:14px;padding:12px 22px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;border-radius:999px;transition:.15s}
+  .svc-tab:hover{background:var(--g-100)}
+  .svc-tab.active{background:#FF5A00;border-color:#FF5A00;color:var(--ink)}
 
   .plan-box{border:2px solid var(--ink);background:var(--white);padding:40px;display:grid;grid-template-columns:260px 1fr;gap:36px;margin-top:24px}
   @media(max-width:760px){.plan-box{grid-template-columns:1fr;padding:28px}}
@@ -392,7 +378,7 @@
       <a href="holypixel-church.html">교회 디자인</a>
       <a href="holypixel-pricing.html" class="active">가격 안내</a>
       <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
-      <a href="holypixel-ai.html">AI 정보</a>
+      <a href="holypixel-ai.html">AI 프롬프트</a>
     </div>
     <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="nav-cta">디자인 의뢰 →</a>
     <button class="burger" aria-label="메뉴"><span></span><span></span><span></span></button>
@@ -402,7 +388,7 @@
       <a href="holypixel-church.html">교회 디자인</a>
       <a href="holypixel-pricing.html" class="active">가격 안내</a>
       <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
-      <a href="holypixel-ai.html">AI 정보</a>
+      <a href="holypixel-ai.html">AI 프롬프트</a>
       <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener">디자인 의뢰 →</a>
     </div>
 </nav>
@@ -441,67 +427,60 @@
 
 <!-- 프로세스 요약 -->
 <section class="section">
-  <div class="wrap" style="text-align:center">
-    <span class="eyebrow" style="justify-content:center">FLOW</span>
-    <h2 class="sec reveal" style="margin-bottom:40px">이렇게 진행됩니다</h2>
-    <div class="flow-steps reveal">
-      <div class="flow-step">
-        <span class="flow-num">01</span>
-        <b>디자인 상담 &amp;<br>레퍼런스 전달</b>
-      </div>
-      <span class="flow-arrow">→</span>
-      <div class="flow-step">
-        <span class="flow-num">02</span>
-        <b>견적서 전달</b>
-      </div>
-      <span class="flow-arrow">→</span>
-      <div class="flow-step">
-        <span class="flow-num">03</span>
-        <b>선결제 후<br>디자인 작업</b>
-      </div>
-      <span class="flow-arrow">→</span>
-      <div class="flow-step">
-        <span class="flow-num">04</span>
-        <b>수정 작업</b>
-      </div>
-      <span class="flow-arrow">→</span>
-      <div class="flow-step">
-        <span class="flow-num">05</span>
-        <b>최종 작업 후<br>원본 전달</b>
-      </div>
-    </div>
-    <p style="color:var(--g-500);font-size:14px;margin-top:36px">부담 없이 확인하고, 준비되셨을 때 문의 주세요.</p>
-    <p class="pricing-note">작업 완료 후 원본 파일을 전달드리며, 사용 범위와 전달 형식은 작업 항목에 따라 안내드립니다.</p>
-  </div>
-</section>
-
-<!-- 대표 작업 시작가 -->
-<section class="section">
   <div class="wrap">
     <div class="head-row reveal">
       <div>
-        <span class="eyebrow">WHERE TO START</span>
-        <h2 class="sec">이 정도부터 생각하시면 됩니다</h2>
+        <span class="eyebrow">Process</span>
+        <h2 class="sec">프로세스는<br>이렇게 진행됩니다.</h2>
       </div>
-      <p>모든 금액은 VAT 포함 금액이며, 원본 파일을 제공합니다. 실제 견적은 디자인 범위에 따라 조정될 수 있습니다.</p>
     </div>
-
-    <div class="cat-tabs reveal" role="tablist" aria-label="가격 카테고리">
-      <button type="button" class="cat-tab active" data-cat="logo" role="tab" aria-selected="true">로고</button>
-      <button type="button" class="cat-tab" data-cat="package" role="tab" aria-selected="false">패키지</button>
-      <button type="button" class="cat-tab" data-cat="detail" role="tab" aria-selected="false">상세페이지</button>
-      <button type="button" class="cat-tab" data-cat="print" role="tab" aria-selected="false">인쇄물</button>
-      <button type="button" class="cat-tab" data-cat="church" role="tab" aria-selected="false">교회 디자인</button>
+    <div class="proc-grid">
+      <div class="proc-card reveal">
+        <span class="proc-num">01</span>
+        <h3>문의/신청</h3>
+        <p>신청서를 작성하여 상담 신청하거나 카카오 오픈채팅으로 신청을 합니다.</p>
+      </div>
+      <div class="proc-card reveal">
+        <span class="proc-num">02</span>
+        <h3>상담</h3>
+        <p>기업이나 브랜드의 특성과 니즈에 필요한 디자인이 무엇인지 브랜드에 맞는 컨셉에 대해 상담해드립니다.</p>
+      </div>
+      <div class="proc-card reveal">
+        <span class="proc-num">03</span>
+        <h3>상세 견적 안내</h3>
+        <p>고객의 니즈를 반영한 상세 견적을 안내해드립니다.</p>
+      </div>
+      <div class="proc-card reveal">
+        <span class="proc-num">04</span>
+        <h3>계약</h3>
+        <p>전자계약서에 서명 및 계약서를 진행 후 입금 절차를 진행합니다.</p>
+      </div>
+      <div class="proc-card reveal">
+        <span class="proc-num">05</span>
+        <h3>브랜딩 디자인 착수</h3>
+        <p>기업이나 브랜드의 특성과 니즈에 필요한 디자인이 무엇인지 브랜드에 맞는 컨셉에 대해 방향성을 도출합니다.</p>
+      </div>
+      <div class="proc-card reveal">
+        <span class="proc-num">06</span>
+        <h3>촬영 및 홈페이지 착수</h3>
+        <p>브랜딩 디자인에 기반하여 홈페이지 디자인 및 퍼블리싱을 착수합니다.</p>
+      </div>
+      <div class="proc-card reveal">
+        <span class="proc-num">07</span>
+        <h3>피드백 및 수정 진행</h3>
+        <p>브랜딩과 홈페이지 작업에 대한 피드백을 반영하고 수정합니다.</p>
+      </div>
+      <div class="proc-card reveal">
+        <span class="proc-num">08</span>
+        <h3>프로젝트 완료</h3>
+        <p>브랜딩 작업 후 이후 프로젝트를 종료하거나 광고 대행 또는 추가 계약여부를 조율합니다.</p>
+      </div>
     </div>
-
-    <div class="cat-panel reveal" id="catPanel"></div>
-
-    <p class="pricing-note" style="text-align:left;margin-top:26px">규모가 크거나 범위가 특별한 맞춤 브랜딩 작업은 상담 후 별도 견적으로 안내드립니다.</p>
   </div>
 </section>
 
 <!-- 패키지 가격 -->
-<section class="section tint">
+<section class="section orange-bg">
   <div class="wrap">
     <div class="head-row reveal">
       <div>
@@ -514,67 +493,179 @@
     <div class="bundle-grid">
       <div class="bundle-card reveal">
         <span class="cat">STARTER</span>
-        <h3>브랜드 스타터 패키지(패키지 1종)</h3>
-        <p class="desc">로고와 패키지만 먼저 필요한 초기 브랜드</p>
-        <div class="bundle-price"><span class="was">55만원부터</span>39<span class="unit">만원부터</span></div>
+        <h3>브랜드 첫 시작! 로고&인쇄물 디자인</h3>
+        <div class="bundle-price">55<span class="unit">만원~</span></div>
         <ul class="bundle-list">
-          <li>로고 디자인</li>
-          <li>패키지 디자인</li>
-          <li>시안 2종 중 택 1</li>
-          <li>무료 수정 2회</li>
-          <li>원본 제공</li>
+          <li>브랜드 로고 디자인</li>
+          <li>로고 매뉴얼북</li>
+          <li>브랜드 로고 적용한 디자인 목업 작업</li>
+          <li>인쇄물 디자인(명함·포스터·메뉴판 등 택1, 출력비 별도)</li>
         </ul>
+        <div class="bundle-notes">
+          <p>* 선금 100% 진행</p>
+          <p>* 수정 무제한, 추가비용 없음</p>
+          <p>* 브랜드 구축이 필요한 사업자 추천</p>
+        </div>
         <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-secondary">스타터 패키지 문의하기</a>
       </div>
 
       <div class="bundle-card reco reveal">
         <span class="bundle-ribbon">가장 많이 찾는 구성</span>
-        <span class="cat">BRAND LAUNCH</span>
-        <h3>브랜드 런칭(패키지 2종)</h3>
-        <p class="desc">스마트스토어 · 자사몰 판매를 준비하는 브랜드</p>
-        <div class="bundle-price"><span class="was">115만원부터</span>79<span class="unit">만원부터</span></div>
+        <span class="cat">GROWTH</span>
+        <h3>브랜드 성장! 로고&패키지</h3>
+        <div class="bundle-price">75<span class="unit">만원~</span></div>
         <ul class="bundle-list">
-          <li>로고 디자인</li>
-          <li>패키지 디자인</li>
-          <li>상세페이지 디자인</li>
-          <li>누끼 이미지 1컷</li>
-          <li>시안 1종</li>
-          <li>무료 수정 2회</li>
-          <li>원본 제공</li>
+          <li>브랜드 로고 디자인</li>
+          <li>로고 매뉴얼북</li>
+          <li>명함 100매</li>
+          <li>패키지 2종</li>
         </ul>
-        <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">런칭 패키지 상담하기</a>
+        <div class="bundle-notes">
+          <p>* 선금 100% 진행</p>
+          <p>* 수정 무제한, 추가비용 없음</p>
+          <p>* 브랜드 성장이 필요한 사업자 추천</p>
+        </div>
+        <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">성장 패키지 상담하기</a>
       </div>
 
       <div class="bundle-card reveal">
-        <span class="cat">BRAND COMPLETE</span>
-        <h3>브랜드 완성 패키지(풀패키지)</h3>
-        <p class="desc">촬영, 상세페이지, SNS까지 한 번에 정리하고 싶은 브랜드</p>
-        <div class="bundle-price"><span class="was">170만원부터</span>99<span class="unit">만원부터</span></div>
+        <span class="cat">COMPLETE</span>
+        <h3>브랜드 완성! 로고&패키지&상세페이지&촬영</h3>
+        <div class="bundle-price">125<span class="unit">만원~</span></div>
         <ul class="bundle-list">
           <li>로고 디자인</li>
-          <li>패키지 디자인</li>
-          <li>제품 촬영</li>
-          <li>상세페이지 디자인</li>
-          <li>SNS(인스타그램) 셋팅</li>
+          <li>로고 매뉴얼북</li>
+          <li>명함 100매</li>
+          <li>패키지 2종</li>
+          <li>상세페이지 1종</li>
+          <li>썸네일 2종</li>
+          <li>촬영 서비스 15컷</li>
         </ul>
-        <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-secondary">맞춤 패키지 상담하기</a>
+        <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-secondary">완성 패키지 상담하기</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 상업/교회 가격 탭 -->
+<section class="section">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div>
+        <span class="eyebrow">WHERE TO START</span>
+        <h2 class="sec">이 정도부터 생각하시면 됩니다</h2>
+      </div>
+      <p>가장 많이 의뢰하시는 작업의 시작가입니다. 실제 견적은 시안 수와 수정 범위에 따라 조정될 수 있어요.</p>
+    </div>
+
+    <div class="svc-tabs reveal">
+      <button type="button" class="svc-tab active" data-target="commerceTab">상업 디자인</button>
+      <button type="button" class="svc-tab" data-target="churchTab">교회 디자인</button>
+    </div>
+
+    <div class="svc-panel" id="commerceTab">
+      <div class="price-grid">
+        <div class="price-card reveal">
+          <span class="cat">LOGO</span>
+          <h3>로고 디자인</h3>
+          <p class="desc">브랜드의 첫인상을 정돈합니다</p>
+          <ul class="tier-list">
+            <li><span>텍스트형</span><b>30만원~</b></li>
+            <li><span>심볼형</span><b>55만원~</b></li>
+            <li><span>브랜딩</span><b>110만원~</b></li>
+          </ul>
+        </div>
+
+        <div class="price-card reveal">
+          <span class="cat">PACKAGE</span>
+          <h3>패키지 디자인</h3>
+          <p class="desc">제품의 신뢰를 담는 겉모습</p>
+          <ul class="tier-list">
+            <li><span>라벨</span><b>10만원~</b></li>
+            <li><span>파우치 · 용기</span><b>15만원~</b></li>
+            <li><span>단상자</span><b>25만원~</b></li>
+            <li><span>복합 패키지</span><b>45만원~</b></li>
+          </ul>
+        </div>
+
+        <div class="price-card reveal">
+          <span class="cat">DETAIL PAGE</span>
+          <h3>상세페이지 디자인</h3>
+          <p class="desc">구매를 설득하는 한 장의 페이지</p>
+          <ul class="tier-list">
+            <li><span>디자인만 진행</span><b>35만원</b></li>
+            <li><span>기획 + 디자인</span><b>65만원</b></li>
+            <li><span>촬영 + 기획 + 디자인</span><b>95만원~</b></li>
+          </ul>
+        </div>
+
+        <div class="price-card reveal">
+          <span class="cat">PRINT</span>
+          <h3>인쇄물 디자인</h3>
+          <p class="desc">포스터 · 현수막 등 공간을 채우는 한 장</p>
+          <ul class="tier-list">
+            <li><span>단순 배리에이션</span><b>장당 5만원</b></li>
+            <li><span>기본 포스터 · 현수막</span><b>15만원~</b></li>
+            <li><span>기획형 인쇄물</span><b>상담 후 견적</b></li>
+          </ul>
+        </div>
+
+        <div class="price-card dark reveal">
+          <span class="cat">CUSTOM</span>
+          <h3>맞춤 브랜딩</h3>
+          <p class="desc">규모가 크거나 범위가 특별한 작업</p>
+          <div class="price-tag" style="font-size:22px">상담 후 견적</div>
+        </div>
       </div>
     </div>
 
-    <div class="plan-box reveal">
-      <div>
-        <span class="eyebrow">PLANNING + DESIGN</span>
-        <h3>기획 + 디자인</h3>
-        <p>단순히 예쁘게 만드는 것을 넘어, 브랜드가 일관되게 보이도록 방향을 함께 잡아드려요.</p>
+    <div class="svc-panel" id="churchTab" style="display:none">
+      <div class="price-grid">
+        <div class="price-card reveal">
+          <span class="cat">SEASONAL</span>
+          <h3>절기 포스터</h3>
+          <p class="desc">부활절 · 추수감사절 · 성탄절 등</p>
+          <div class="price-tag">15<span class="unit">만원~</span></div>
+          <span class="badge-basis">기준가</span>
+        </div>
+
+        <div class="price-card reveal">
+          <span class="cat">BANNER</span>
+          <h3>현수막 디자인</h3>
+          <p class="desc">사이즈 · 인쇄 사양에 따라 변동</p>
+          <div class="price-tag">15<span class="unit">만원~</span></div>
+          <span class="badge-basis">기준가</span>
+        </div>
+
+        <div class="price-card reveal">
+          <span class="cat">LEAFLET</span>
+          <h3>리플렛 디자인</h3>
+          <p class="desc">정기 발행물 기본 구성</p>
+          <div class="price-tag">20<span class="unit">만원~</span></div>
+          <span class="badge-basis">기준가</span>
+        </div>
+
+        <div class="price-card reveal">
+          <span class="cat">CHURCH · EVENT</span>
+          <h3>교회 브랜딩, 행사 디자인</h3>
+          <p class="desc">로고 브랜딩부터 포스터·현수막, 웹사이트·주보·굿즈까지</p>
+          <div class="price-tag">33<span class="unit">만원~</span></div>
+          <span class="badge-basis">기준가</span>
+        </div>
+
+        <div class="price-card dark reveal">
+          <span class="cat">EVENT SET</span>
+          <h3>대형 행사 세트</h3>
+          <p class="desc">포스터 + 현수막 + 택 2종 (배너 · PPT · SNS 피드 · 엽서 등)</p>
+          <div class="price-tag">55<span class="unit">만원~</span></div>
+        </div>
       </div>
-      <ul class="plan-list">
-        <li>브랜드 방향성 정리</li>
-        <li>디자인 톤앤매너 설정</li>
-        <li>상세페이지 흐름 기획</li>
-        <li>제품 이미지 보정</li>
-        <li>로고 / 패키지 / 상세페이지 통일성 설계</li>
-      </ul>
+
+      <p class="pricing-note" style="text-align:left;margin:26px 0 0">교회 디자인 시안은 2종, 무료 수정 2회를 기본제공으로 합니다.</p>
     </div>
+
   </div>
 </section>
 
@@ -704,7 +795,7 @@
         <a href="holypixel-church.html">교회 디자인</a>
         <a href="holypixel-pricing.html">가격 안내</a>
         <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
-        <a href="holypixel-ai.html">AI 정보</a>
+        <a href="holypixel-ai.html">AI 프롬프트</a>
       </div>
     </div>
     <div class="foot-bot">
@@ -720,75 +811,22 @@
 </script>
 <script>
   (function(){
-    var catData={
-      logo:{cat:'LOGO',title:'로고 디자인',desc:'브랜드의 첫인상을 정돈합니다',items:[
-        {name:'기본형',price:'29만원',originalPrice:'35만원',note:'로고 시안 2가지 (택 1)',includes:['상업적 이용 가능한 폰트 50종 모음 제공'],recommend:'원하는 로고 스케치가 있어 이미지만 빠르게 필요할 때 추천'},
-        {name:'맞춤형',price:'49만원',originalPrice:'55만원',note:'로고 시안 3가지 (택 1)',includes:['상업적 이용 가능 폰트 50종','고급 명함 200매','컬러 시스템','응용 가이드 제공'],recommend:'합리적인 브랜딩 기반을 세우고 싶을 때 추천'},
-        {name:'완전 맞춤형',price:'89만원',originalPrice:'110만원',note:'로고 시안 4종 (택 1)',includes:['상업적 이용 가능 폰트 100종','고급 명함 200매','컬러 시스템','브랜드 가이드북','응용 디자인(로고·명함·간판·티셔츠·대봉투·스티커·머그컵 등)'],recommend:'브랜드 가치를 높이고 정체성을 확립하고 싶을 때 추천 — 로고와 각종 응용물 디자인이 포함됩니다'}
-      ]},
-      package:{cat:'PACKAGE',title:'패키지 디자인',desc:'제품의 신뢰를 담는 겉모습',items:[
-        {name:'라벨 디자인',price:'15만원~'},
-        {name:'파우치 · 용기',price:'20만원~'},
-        {name:'단상자',price:'25만원~'},
-        {name:'복합 패키지 세트',price:'84만원~',note:'시안 2가지 (택 1)',includes:['감리 진행','컬러 시스템','디자인 제안'],recommend:'용기·단상자·싸바리 박스까지 세트로 진행하실 경우 복합 패키지 세트를 추천드려요'}
-      ],footnote:['후가공 여부와 칼선 여부에 따라 금액이 책정되며, 위 금액은 기본 단가 시작 금액입니다.','복합 패키지는 용기 · 단상자 · 세트 싸바리까지 함께 진행하는 풀세트 구성입니다.']},
-      detail:{cat:'DETAIL PAGE',title:'상세페이지 디자인',desc:'구매를 설득하는 한 장의 페이지',items:[
-        {name:'디자인만 진행',price:'29만원',note:'px 제한 없이 디자인만 진행 (기획 제외)',recommend:'원하는 컨셉과 기획이 완성되어 디자인만 필요한 경우 추천'},
-        {name:'기획 + 디자인',price:'45만원',note:'px 제한 없이 진행',recommend:'합리적인 제품 기획이 필요한 경우 추천'},
-        {name:'촬영 + 기획 + 디자인',price:'65만원',includes:['촬영 15장 + 썸네일 3종 제공'],recommend:'프리미엄 연출 이미지 컷이 필요할 때 진행하길 추천'}
-      ]},
-      print:{cat:'PRINT',title:'인쇄물 디자인',desc:'포스터 · 현수막 등 공간을 채우는 한 장',items:[
-        {name:'포스터 디자인',price:'12만원'},
-        {name:'리플렛 디자인 (3단 기준)',price:'32만원~'},
-        {name:'리플렛 디자인 (2단 기준)',price:'22만원~'},
-        {name:'카탈로그 제작',price:'39만원~'}
-      ]},
-      church:{cat:'CHURCH',title:'교회 디자인',desc:'절기와 행사에 맞춘 교회 디자인',items:[
-        {name:'절기 포스터 · 현수막 디자인',price:'12만원'},
-        {name:'리플렛 디자인',price:'22만원~'},
-        {name:'리브랜딩',price:'33만원',note:'로고 시안 2종 (택 1)',includes:['서체 50종 무료 제공','프리미엄 명함 200매 제공'],recommend:'기존 로고를 트렌디하게 변경하고 싶은 경우 추천'},
-        {name:'대형 행사 세트',price:'49만원~',originalPrice:'55만원~',recommend:'포스터 + 현수막 + 각종 디자인이 여러 개 필요할 때, 합리적인 비용으로 작업하고 싶은 경우 추천'}
-      ],footnote:['교회 디자인은 기본 시안 2종, 무료 수정 3회, 원본 제공을 기본으로 합니다.']}
-    };
-    var tabs=document.querySelectorAll('.cat-tab');
-    var panel=document.getElementById('catPanel');
-    if(!panel) return;
-    function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
-    function renderItem(it){
-      var priceHtml=(it.originalPrice?'<span class="was">'+esc(it.originalPrice)+'</span>':'')+esc(it.price);
-      var noteHtml=it.note?'<div class="cp-note">'+esc(it.note)+'</div>':'';
-      var includesHtml=it.includes?'<ul class="cp-includes">'+it.includes.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'';
-      var recHtml=it.recommend?'<div class="cp-recommend">'+esc(it.recommend)+'</div>':'';
-      return '<li class="cp-item"><div class="cp-item-top"><span class="cp-name">'+esc(it.name)+'</span><span class="cp-price">'+priceHtml+'</span></div>'+noteHtml+includesHtml+recHtml+'</li>';
-    }
-    function render(key){
-      var d=catData[key];
-      if(!d) return;
-      var itemsHtml=d.items.map(renderItem).join('');
-      var footHtml=d.footnote?'<ul class="cp-footnote">'+d.footnote.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'';
-      panel.innerHTML='<div class="cp-head"><span class="cat">'+esc(d.cat)+'</span><h3>'+esc(d.title)+'</h3><p>'+esc(d.desc)+'</p></div><ul class="cp-items">'+itemsHtml+'</ul>'+footHtml;
-      panel.classList.remove('fade-in');
-      void panel.offsetWidth;
-      panel.classList.add('fade-in');
-    }
-    tabs.forEach(function(t){
-      t.addEventListener('click',function(){
-        tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false');});
-        t.classList.add('active');t.setAttribute('aria-selected','true');
-        render(t.dataset.cat);
-      });
-    });
-    render('logo');
-  })();
-</script>
-<script>
-  (function(){
     var b=document.querySelector('.burger'), m=document.getElementById('mobileMenu');
     if(b&&m){
       b.addEventListener('click',function(){m.classList.toggle('open');b.classList.toggle('active');});
       m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.classList.remove('active');});});
     }
   })();
+</script>
+<script>
+  document.querySelectorAll('.svc-tab').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.svc-tab').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var target = btn.getAttribute('data-target');
+      document.querySelectorAll('.svc-panel').forEach(function(p){ p.style.display = (p.id === target) ? '' : 'none'; });
+    });
+  });
 </script>
 </body>
 </html>
