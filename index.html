@@ -198,6 +198,58 @@
   /* ===== SECTION HEAD ===== */
   section{padding:90px 0}
   .head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:46px;flex-wrap:wrap}
+
+  /* ===== WHY HOLYPIXEL ===== */
+  .reason-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--g-300)}
+  .reason-list li{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--g-300)}
+  @media(max-width:680px){.reason-list li{grid-template-columns:1fr;gap:8px}}
+  .reason-list li b{font-size:18px;font-weight:900}
+  .reason-list li span{font-size:14px;color:var(--g-600);line-height:1.65}
+
+  /* ===== WHY HOLYPIXEL - CIRCLES ===== */
+  .reason-circles{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  @media(max-width:760px){.reason-circles{grid-template-columns:1fr;gap:36px}}
+  .rc-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px}
+  .rc-circle{width:168px;height:168px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;line-height:1.4;border:2px solid var(--ink)}
+  .rc-circle.white{background:var(--white);color:var(--ink)}
+  .rc-circle.orange{background:#FF5A00;color:var(--ink);border-color:#FF5A00}
+  .rc-item p{font-size:14px;color:var(--g-600);line-height:1.65;max-width:280px}
+
+  /* ===== GRAY REVIEW BOXES ===== */
+  .gray-review-list{display:flex;flex-direction:column;gap:16px}
+  .gray-review{background:var(--g-100);border-radius:14px;padding:26px 30px;max-width:88%}
+  .gray-review:nth-child(even){align-self:flex-end}
+  @media(max-width:680px){.gray-review{max-width:100%}}
+  .gr-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .gr-head b{font-size:15px;font-weight:800}
+  .gr-head .review-stars{color:#FFB020;font-size:14px;letter-spacing:1px}
+  .gray-review p{font-size:14px;color:var(--g-700);line-height:1.7}
+
+  /* ===== BLACK-BG WHITE BUBBLE REVIEWS ===== */
+  .bubble-review-list{display:flex;flex-direction:column;gap:16px}
+  .bubble-review{background:#fff;border-radius:20px 20px 20px 4px;padding:26px 30px;max-width:88%}
+  .bubble-review:nth-child(even){align-self:flex-end;border-radius:20px 20px 4px 20px}
+  @media(max-width:680px){.bubble-review{max-width:100%}}
+  .bubble-review .gr-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .bubble-review .gr-head b{font-size:15px;font-weight:800;color:var(--ink)}
+  .bubble-review .review-stars{color:#FFB020;font-size:14px;letter-spacing:1px}
+  .bubble-review p{font-size:14px;color:var(--g-700);line-height:1.7}
+
+  /* ===== SERVICES 2x2 IMAGE GRID ===== */
+  .svc4-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  @media(max-width:760px){.svc4-grid{grid-template-columns:1fr}}
+  .svc4-tile{display:flex;flex-direction:column;border:2px solid var(--ink);text-decoration:none;color:inherit;transition:transform .15s}
+  .svc4-tile:hover{transform:translateY(-4px)}
+  .svc4-img{aspect-ratio:16/11;position:relative;display:flex;align-items:flex-start;padding:32px}
+  .svc4-overlay{max-width:80%}
+  .svc4-overlay .svc4-tag{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink);display:block;margin-bottom:10px}
+  .svc4-overlay h3{font-size:26px;font-weight:900;letter-spacing:-.01em;color:var(--ink);margin-bottom:10px;line-height:1.25}
+  .svc4-overlay p{font-size:14px;color:var(--g-600);line-height:1.5}
+  .svc4-overlay.light .svc4-tag{color:#FF5A00}
+  .svc4-overlay.light h3{color:#fff}
+  .svc4-overlay.light p{color:rgba(255,255,255,.65)}
+  .svc4-bar{background:var(--white);border-top:2px solid var(--ink);padding:20px;text-align:center;font-size:17px;font-weight:900;color:#FF5A00}
+
   .eyebrow{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:9px;margin-bottom:14px}
   .eyebrow::before{content:"";width:26px;height:2px;background:var(--ink)}
   h2.sec{font-size:clamp(30px,4.5vw,46px);font-weight:900;letter-spacing:-.025em;line-height:1.08}
@@ -383,21 +435,19 @@
   <div class="wrap">
     <a href="#" class="logo"><img class="logo-img" src="images/portfolio/31727f77e8c4.webp" alt="holy pixel 디자인 스튜디오"></a>
     <div class="menu">
+      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
       <a href="holypixel-commerce.html">상업 디자인</a>
       <a href="holypixel-church.html">교회 디자인</a>
       <a href="holypixel-pricing.html">가격 안내</a>
-      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
-      <a href="holypixel-ai.html">AI 프롬프트</a>
     </div>
     <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="nav-cta">디자인 의뢰</a>
     <button class="burger" aria-label="메뉴"><span></span><span></span><span></span></button>
   </div>
     <div class="mobile-menu" id="mobileMenu">
+      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
       <a href="holypixel-commerce.html">상업 디자인</a>
       <a href="holypixel-church.html">교회 디자인</a>
       <a href="holypixel-pricing.html">가격 안내</a>
-      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
-      <a href="holypixel-ai.html">AI 프롬프트</a>
       <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener">디자인 의뢰 →</a>
     </div>
 </nav>
@@ -433,6 +483,99 @@
 
   </div>
 </header>
+
+<!-- REVIEWS TOP -->
+<section style="background:var(--ink)">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div>
+        <span class="eyebrow" style="color:#FF5A00">Reviews</span>
+        <h2 class="sec" style="color:#fff">홀리픽셀과 함께한 브랜드의 이야기</h2>
+      </div>
+    </div>
+    <div class="bubble-review-list reveal">
+      <div class="bubble-review">
+        <div class="gr-head"><b>신규 런칭 브랜드</b><span class="review-stars">★★★★★</span></div>
+        <p>"막연했던 브랜드 이미지를 로고 하나로 딱 잡아 주셨어요. 시안마다 왜 이런 형태와 컬러를 썼는지 설명해 주셔서 믿고 선택할 수 있었어요. 지금은 어디에 놓아도 우리 브랜드답다는 말을 들어요."</p>
+      </div>
+      <div class="bubble-review">
+        <div class="gr-head"><b>식품 브랜드</b><span class="review-stars">★★★★★</span></div>
+        <p>"패키지가 바뀌고 나서 매대에서 눈에 띈다는 이야기를 많이 들어요. 디자인만 예쁜 게 아니라 제품이 돋보이도록 구조까지 고민해 주셔서 만족스러웠어요."</p>
+      </div>
+      <div class="bubble-review">
+        <div class="gr-head"><b>온라인 쇼핑몰</b><span class="review-stars">★★★★★</span></div>
+        <p>"상세페이지를 새로 만든 뒤 문의가 눈에 띄게 늘었어요. 제품 장점이 한눈에 읽히도록 흐름을 짜 주셔서, 고객이 어디서 망설이는지까지 생각해 주신 게 느껴졌어요."</p>
+      </div>
+      <div class="bubble-review">
+        <div class="gr-head"><b>외식 브랜드</b><span class="review-stars">★★★★★</span></div>
+        <p>"제품 촬영이 정말 만족스러웠어요. 브랜드 분위기에 맞는 배경과 소품으로 연출해 주셔서 사진 한 장 한 장이 그대로 홍보 콘텐츠가 됐어요."</p>
+      </div>
+      <div class="bubble-review">
+        <div class="gr-head"><b>리뉴얼 진행 브랜드</b><span class="review-stars">★★★★★</span></div>
+        <p>"기획 단계에서 타겟과 컨셉을 먼저 정리해 주셔서 이후 작업이 전부 한 방향으로 흘러갔어요. 로고부터 패키지, 촬영까지 한 곳에서 진행하니 톤이 일관되고 예산과 일정도 훨씬 안정적이었어요."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES 2 -->
+<section id="services2" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div>
+        <span class="eyebrow" style="color:#FF5A00">Services</span>
+        <h2 class="sec" style="color:#fff">브랜딩 디자인 서비스</h2>
+      </div>
+      <p style="color:rgba(255,255,255,.6)">작업 범위에 따른 기본 가격입니다. 정확한 견적은 상담을 통해 안내드립니다.</p>
+    </div>
+
+    <div class="svc4-grid">
+      <a href="holypixel-pricing.html" class="svc4-tile reveal">
+        <div class="svc4-img" style="background:linear-gradient(180deg,rgba(10,8,6,.6),rgba(10,8,6,.05) 55%),url('images/portfolio/2cc8ac427982.webp') center/cover">
+          <div class="svc4-overlay light">
+            <span class="svc4-tag">LOGO</span>
+            <h3>로고 디자인</h3>
+            <p>모든 표현법에 대응 가능한 프리미엄 로고 디자인</p>
+          </div>
+        </div>
+        <div class="svc4-bar">33만원~</div>
+      </a>
+
+      <a href="holypixel-pricing.html" class="svc4-tile reveal">
+        <div class="svc4-img" style="background:linear-gradient(180deg,rgba(10,8,6,.6),rgba(10,8,6,.05) 55%),url('images/portfolio/7a22deccb84a.webp') center/cover">
+          <div class="svc4-overlay light">
+            <span class="svc4-tag">BRANDING</span>
+            <h3>브랜딩 디자인</h3>
+            <p>브랜드 기획부터 로고, 인쇄물, 가이드북까지 솔루션</p>
+          </div>
+        </div>
+        <div class="svc4-bar">견적 문의</div>
+      </a>
+
+      <a href="holypixel-pricing.html" class="svc4-tile reveal">
+        <div class="svc4-img" style="background:linear-gradient(180deg,rgba(10,8,6,.6),rgba(10,8,6,.05) 55%),url('images/portfolio/f272eb145326.webp') center/cover">
+          <div class="svc4-overlay light">
+            <span class="svc4-tag">DETAIL PAGE</span>
+            <h3>상세페이지 디자인</h3>
+            <p>구매를 설득하는 한 장의 페이지</p>
+          </div>
+        </div>
+        <div class="svc4-bar">35만원~</div>
+      </a>
+
+      <a href="holypixel-pricing.html" class="svc4-tile reveal">
+        <div class="svc4-img" style="background:linear-gradient(180deg,rgba(10,8,6,.6),rgba(10,8,6,.05) 55%),url('images/portfolio/25b27c33318f.webp') center/cover">
+          <div class="svc4-overlay light">
+            <span class="svc4-tag">CHURCH</span>
+            <h3>교회 디자인</h3>
+            <p>로고 브랜딩부터 절기·행사 디자인까지</p>
+          </div>
+        </div>
+        <div class="svc4-bar">33만원~</div>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- FEATURED WORK -->
 <section id="work" class="feat">
@@ -506,7 +649,7 @@
   <div class="wrap">
     <div class="st"><div class="n">200+</div><div class="l">완료 프로젝트</div></div>
     <div class="st"><div class="n">50+</div><div class="l">함께한 브랜드·교회</div></div>
-    <div class="st"><div class="n">3~10일</div><div class="l">평균 작업 기간</div></div>
+    <div class="st"><div class="n">5~15일</div><div class="l">평균 작업 기간</div></div>
     <div class="st"><div class="n">95%</div><div class="l">재구매율</div></div>
   </div>
 </div>
@@ -589,168 +732,22 @@
   <div class="wrap">
     <div class="head-row reveal">
       <div>
-        <span class="eyebrow">Reviews</span>
-        <h2 class="sec">고객 후기</h2>
-      </div>
-      <p>홀리픽셀과 함께한 브랜드·교회의 이야기를 만나보세요.</p>
-    </div>
-    <div class="review-grid5">
-      <div class="review-card reveal">
-        <div class="review-body">
-          <div class="review-cat">로고</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"막연했던 브랜드 이미지를 로고 하나로 딱 잡아 주셨어요. 시안마다 왜 이런 형태와 컬러를 썼는지 설명해 주셔서 믿고 선택할 수 있었어요. 지금은 어디에 놓아도 우리 브랜드답다는 말을 들어요."</p>
-          <div class="review-name">- 신규 런칭 브랜드 대표님</div>
-        </div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-body">
-          <div class="review-cat">패키지</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"패키지가 바뀌고 나서 매대에서 눈에 띈다는 이야기를 많이 들어요. 디자인만 예쁜 게 아니라 제품이 돋보이도록 구조까지 고민해 주셔서 만족스러웠어요."</p>
-          <div class="review-name">- 식품 브랜드 담당자님</div>
-        </div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-body">
-          <div class="review-cat">상세페이지</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"상세페이지를 새로 만든 뒤 문의가 눈에 띄게 늘었어요. 제품 장점이 한눈에 읽히도록 흐름을 짜 주셔서, 고객이 어디서 망설이는지까지 생각해 주신 게 느껴졌어요."</p>
-          <div class="review-name">- 온라인 쇼핑몰 운영자님</div>
-        </div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-body">
-          <div class="review-cat">촬영</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"제품 촬영이 정말 만족스러웠어요. 브랜드 분위기에 맞는 배경과 소품으로 연출해 주셔서 사진 한 장 한 장이 그대로 홍보 콘텐츠가 됐어요."</p>
-          <div class="review-name">- 외식 브랜드 대표님</div>
-        </div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-body">
-          <div class="review-cat">기획</div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"기획 단계에서 타겟과 컨셉을 먼저 정리해 주셔서 이후 작업이 전부 한 방향으로 흘러갔어요. 로고부터 패키지, 촬영까지 한 곳에서 진행하니 톤이 일관되고 예산과 일정도 훨씬 안정적이었어요."</p>
-          <div class="review-name">- 리뉴얼 진행 브랜드 대표님</div>
-        </div>
+        <span class="eyebrow">Why Holypixel</span>
+        <h2 class="sec">홀리픽셀에 맡겨야 하는 세 가지 이유</h2>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- SERVICES 2 -->
-<section id="services2" style="background:var(--ink)">
-  <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow" style="color:#fff">Services</span>
-        <h2 class="sec" style="color:#fff">브랜딩 디자인 서비스</h2>
+    <div class="reason-circles reveal">
+      <div class="rc-item">
+        <div class="rc-circle white">한 곳에서<br>끝납니다</div>
+        <p>로고, 패키지, 상세페이지, 촬영 업체를 따로 찾고 조율할 필요가 없습니다.</p>
       </div>
-      <p style="color:rgba(255,255,255,.6)">작업 범위에 따른 기본 가격입니다. 정확한 견적은 상담을 통해 안내드립니다.</p>
-    </div>
-
-    <div class="svc-tabs reveal">
-      <button type="button" class="svc-tab active" data-target="pkgTab">브랜딩 패키지 서비스</button>
-      <button type="button" class="svc-tab" data-target="singleTab">브랜딩 단품 서비스</button>
-    </div>
-
-    <div class="svc-panel" id="pkgTab">
-      <div class="svc2-grid">
-        <div class="svc2-card hi reveal">
-          <h3>브랜드 첫 시작! 로고&인쇄물 디자인</h3>
-          <div class="svc2-price">55만원~</div>
-          <div class="svc2-vat">*VAT 별도</div>
-          <hr>
-          <div class="svc2-period">기간<span>2주 ~ 4주</span></div>
-          <div class="svc2-sub">서비스소개</div>
-          <ul class="svc2-list">
-            <li>브랜드 로고 디자인</li>
-            <li>로고 매뉴얼북</li>
-            <li>브랜드 로고 적용한 디자인 목업 작업</li>
-            <li>인쇄물 디자인(명함·포스터·메뉴판 등 택1, 출력비 별도)</li>
-          </ul>
-          <div class="svc2-notes">
-            <p>* 선금 100% 진행</p>
-            <p>* 수정 무제한, 추가비용 없음</p>
-            <p>* 브랜드 구축이 필요한 사업자 추천</p>
-          </div>
-        </div>
-        <div class="svc2-card reveal">
-          <h3>브랜드 성장! 로고&패키지</h3>
-          <div class="svc2-price">75만원~</div>
-          <div class="svc2-vat">*VAT 별도</div>
-          <hr>
-          <div class="svc2-sub">서비스소개</div>
-          <ul class="svc2-list">
-            <li>브랜드 로고 디자인</li>
-            <li>로고 매뉴얼북</li>
-            <li>명함 100매</li>
-            <li>패키지 2종</li>
-          </ul>
-          <div class="svc2-notes">
-            <p>* 선금 100% 진행</p>
-            <p>* 수정 무제한, 추가비용 없음</p>
-            <p>* 브랜드 성장이 필요한 사업자 추천</p>
-          </div>
-        </div>
-        <div class="svc2-card reveal">
-          <h3>브랜드 완성! 로고&패키지&상세페이지&촬영</h3>
-          <div class="svc2-price">125만원~</div>
-          <div class="svc2-vat">*VAT 별도</div>
-          <hr>
-          <div class="svc2-sub">서비스소개</div>
-          <ul class="svc2-list">
-            <li>로고 디자인</li>
-            <li>로고 매뉴얼북</li>
-            <li>명함 100매</li>
-            <li>패키지 2종</li>
-            <li>상세페이지 1종</li>
-            <li>썸네일 2종</li>
-            <li>촬영 서비스 15컷</li>
-          </ul>
-        </div>
-        <div class="svc2-card reveal">
-          <h3>교회 브랜딩, 행사 디자인</h3>
-          <div class="svc2-price">33만원~</div>
-          <div class="svc2-vat">*VAT 별도</div>
-          <hr>
-          <div class="svc2-sub">서비스소개</div>
-          <ul class="svc2-list">
-            <li>로고 브랜딩</li>
-            <li>포스터·현수막 행사·절기 디자인</li>
-            <li>웹사이트, 주보, 굿즈 등 행사 디자인</li>
-          </ul>
-        </div>
+      <div class="rc-item">
+        <div class="rc-circle orange">톤이<br>처음부터<br>맞습니다</div>
+        <p>디자인한 사람이 직접 촬영하니 사진과 패키지, 상세페이지가 하나의 브랜드로 보입니다.</p>
       </div>
-    </div>
-
-    <div class="svc-panel" id="singleTab" style="display:none">
-      <div class="price-grid">
-        <div class="price-card reveal">
-          <span class="eyebrow">LOGO</span>
-          <h3>로고 디자인</h3>
-          <p class="desc">브랜드의 첫인상을 정돈합니다</p>
-          <div class="price-rows"><div class="price-row"><span class="lbl">텍스트형</span><span class="val">30만원~</span></div><div class="price-row"><span class="lbl">심볼형</span><span class="val">55만원~</span></div><div class="price-row"><span class="lbl">브랜딩</span><span class="val">110만원~</span></div></div>
-        </div>
-        <div class="price-card reveal">
-          <span class="eyebrow">PACKAGE</span>
-          <h3>패키지 디자인</h3>
-          <p class="desc">제품의 신뢰를 담는 겉모습</p>
-          <div class="price-rows"><div class="price-row"><span class="lbl">라벨</span><span class="val">10만원~</span></div><div class="price-row"><span class="lbl">파우치·용기</span><span class="val">15만원~</span></div><div class="price-row"><span class="lbl">단상자</span><span class="val">25만원~</span></div><div class="price-row"><span class="lbl">복합 패키지</span><span class="val">45만원~</span></div></div>
-        </div>
-        <div class="price-card reveal">
-          <span class="eyebrow">DETAIL PAGE</span>
-          <h3>상세페이지 디자인</h3>
-          <p class="desc">구매를 설득하는 한 장의 페이지</p>
-          <div class="price-rows"><div class="price-row"><span class="lbl">디자인만 진행</span><span class="val">35만원~</span></div><div class="price-row"><span class="lbl">기획 + 디자인</span><span class="val">65만원~</span></div><div class="price-row"><span class="lbl">촬영 + 기획 + 디자인</span><span class="val">95만원~</span></div></div>
-        </div>
-        <div class="price-card reveal">
-          <span class="eyebrow">PRINT</span>
-          <h3>인쇄물 디자인</h3>
-          <p class="desc">포스터·현수막 등 공간을 채우는 한 장</p>
-          <div class="price-rows"><div class="price-row"><span class="lbl">단순 배리에이션</span><span class="val">장당 5만원</span></div><div class="price-row"><span class="lbl">기본 포스터·현수막</span><span class="val">15만원~</span></div><div class="price-row"><span class="lbl">기획형 인쇄물</span><span class="val">상담 후 견적</span></div></div>
-        </div>
+      <div class="rc-item">
+        <div class="rc-circle white">과정이<br>쉽게<br>이해됩니다</div>
+        <p>그래픽 강사 출신 디자이너라, 디자인을 몰라도 결정하기 쉽게 설명해드립니다.</p>
       </div>
     </div>
 
@@ -892,11 +889,10 @@
         <p class="brand-name">홀리픽셀 디자인 스튜디오 — 픽셀처럼 정교하게, 빛처럼 선명하게. 교회·브랜드·상업 디자인 원스톱 스튜디오.</p>
       </div>
       <div class="foot-menu">
+        <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
+        <a href="holypixel-commerce.html">상업 디자인</a>
         <a href="holypixel-church.html">교회 디자인</a>
         <a href="holypixel-pricing.html">가격 안내</a>
-        <a href="holypixel-commerce.html">상업 디자인</a>
-        <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
-        <a href="holypixel-ai.html">AI 프롬프트</a>
       </div>
     </div>
     <div class="foot-bot">
