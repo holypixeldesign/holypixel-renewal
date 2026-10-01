@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>가격 안내 — 홀리픽셀 디자인 스튜디오</title>
+<title>소개 — 산업디자인 전문회사 홀리픽셀</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -642,6 +642,83 @@
     .est-sup label b{margin-left:32px;width:100%}
     .est-totals .big{font-size:26px}
   }
+
+  /* ===== ABOUT PAGE ===== */
+  .ab-hero{padding:96px 0 100px;border-bottom:2px solid var(--ink)}
+  .ab-hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;align-items:center}
+  @media(max-width:900px){.ab-hero .wrap{grid-template-columns:1fr;gap:44px}}
+  .ab-kicker{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--ink);background:var(--o-500);font-size:14px;font-weight:900;padding:7px 14px;margin-bottom:26px;box-shadow:3px 3px 0 var(--ink)}
+  .ab-hero h1{font-size:clamp(32px,5.4vw,64px);font-weight:900;line-height:1.14;letter-spacing:-.035em;margin-bottom:26px}
+  .ab-hero h1 .hl{background:linear-gradient(transparent 62%,var(--o-200) 62%)}
+  .ab-hero .hero-sub{margin-bottom:34px;max-width:560px}
+  .ab-stamp{border:2px solid var(--ink);background:var(--white);box-shadow:10px 10px 0 var(--o-500);padding:40px 30px 30px;text-align:center}
+  .ab-stamp .mk{display:inline-grid;grid-template-columns:repeat(3,22px);gap:4px;padding:8px;background:var(--ink);margin-bottom:22px}
+  .ab-stamp .mk i{width:22px;height:22px;background:var(--ink)}
+  .ab-stamp .mk i:nth-child(odd){background:var(--o-500)}
+  .ab-stamp .mk i:nth-child(5){background:#fff}
+  .ab-stamp .cert{display:block;width:100%;height:auto;border:2px solid var(--ink);margin-bottom:22px}
+  .ab-stamp{padding:24px 24px 28px}
+  .ab-stamp b{display:block;font-size:24px;font-weight:900;letter-spacing:-.02em}
+  .ab-stamp .en{display:block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--g-500);margin-top:6px}
+  .ab-stamp hr{border:none;border-top:1px dashed var(--g-300);margin:22px 0 18px}
+  .ab-stamp p{font-size:13.5px;color:var(--g-600);line-height:1.65}
+
+  .ab-statement{background:var(--o-500);border-bottom:2px solid var(--ink)}
+  .ab-statement .wrap{padding:96px 24px;text-align:center}
+  .ab-statement p.big{font-size:clamp(24px,3.6vw,42px);font-weight:900;line-height:1.38;letter-spacing:-.03em;max-width:900px;margin:0 auto}
+  .ab-statement p.big span{background:var(--ink);color:#fff;padding:0 10px;-webkit-box-decoration-break:clone;box-decoration-break:clone;word-break:keep-all}
+  .ab-statement p.big,.ab-hero h1,.ab-open h2.sec,.ab-work h2.sec{word-break:keep-all}
+  @media(max-width:560px){.ab-statement .wrap{padding:64px 22px}}
+
+  .ab-split{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+  @media(max-width:860px){.ab-split{grid-template-columns:1fr;gap:28px}}
+  .ab-split h2.sec{line-height:1.2}
+  .ab-body p{font-size:16.5px;color:var(--g-700);line-height:1.85;margin-bottom:18px}
+  .ab-body p strong{color:var(--ink)}
+  .ab-vals{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+  @media(max-width:860px){.ab-vals{grid-template-columns:1fr}}
+  .ab-val{border:2px solid var(--ink);background:var(--white);padding:30px 28px;transition:transform .12s,box-shadow .12s}
+  .ab-val:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+  .ab-val .ico{width:44px;height:44px;border:2px solid var(--ink);background:var(--o-50);display:grid;place-items:center;margin-bottom:18px}
+  .ab-val .ico i{width:14px;height:14px;background:var(--o-500);box-shadow:4px 4px 0 var(--ink)}
+  .ab-val h3{font-size:19px;font-weight:900;margin-bottom:10px;letter-spacing:-.02em}
+  .ab-val p{font-size:14px;color:var(--g-600);line-height:1.7}
+
+  .ab-work{background:var(--ink);color:#fff}
+  .ab-work .head-c{text-align:center;max-width:760px;margin:0 auto 56px}
+  .ab-work .eyebrow{color:var(--o-500)}
+  .ab-work .eyebrow::before{background:var(--o-500)}
+  .ab-work h2.sec{color:#fff;line-height:1.25;margin-bottom:20px}
+  .ab-work .head-c p{color:rgba(255,255,255,.65);font-size:15.5px;line-height:1.8}
+  .ab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--ink);border:2px solid #fff}
+  @media(max-width:900px){.ab-grid{grid-template-columns:repeat(2,1fr)}}
+  .ab-tile{position:relative;aspect-ratio:1/1;background-size:cover;background-position:center;overflow:hidden;display:block}
+  .ab-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,17,12,.75),transparent 55%);opacity:.85;transition:opacity .2s}
+  .ab-tile:hover::after{opacity:1;background:linear-gradient(0deg,rgba(255,90,0,.85),rgba(255,90,0,.15) 70%)}
+  .ab-tile figcaption{position:absolute;left:18px;bottom:16px;right:18px;z-index:1}
+  .ab-tile figcaption span{display:block;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.75)}
+  .ab-tile figcaption b{font-size:17px;font-weight:900}
+  .ab-work .more{text-align:center;margin-top:40px}
+  .ab-work .more .btn{background:transparent;color:#fff;border-color:#fff}
+  .ab-work .more .btn:hover{background:#fff;color:var(--ink)}
+
+  .ab-open h2.sec{text-align:center;line-height:1.3;margin-bottom:56px}
+  .ab-contact{display:grid;grid-template-columns:5fr 7fr;border:2px solid var(--ink)}
+  @media(max-width:820px){.ab-contact{grid-template-columns:1fr}}
+  .ab-kakao{background:#FEE500;color:#3B1E1E;padding:44px 36px;display:flex;flex-direction:column;justify-content:space-between;gap:30px;border-right:2px solid var(--ink);transition:background .2s}
+  @media(max-width:820px){.ab-kakao{border-right:none;border-bottom:2px solid var(--ink)}}
+  .ab-kakao:hover{background:#ffd900}
+  .ab-kakao svg{width:54px;height:54px}
+  .ab-kakao b{display:block;font-size:26px;font-weight:900;letter-spacing:-.02em;line-height:1.3}
+  .ab-kakao span{font-size:14px;font-weight:600;opacity:.75}
+  .ab-kakao .go{font-family:var(--mono);font-size:13px;font-weight:700;border-top:2px solid #3B1E1E;padding-top:16px;display:flex;justify-content:space-between}
+  .ab-info{list-style:none;margin:0;padding:0;background:var(--white)}
+  .ab-info li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:26px 30px;border-bottom:1px dashed var(--g-300);align-items:baseline}
+  .ab-info li:last-child{border-bottom:none;background:var(--g-100)}
+  @media(max-width:560px){.ab-info li{grid-template-columns:1fr;gap:4px;padding:20px 22px}}
+  .ab-info li b{font-size:15px;font-weight:900}
+  .ab-info li span,.ab-info li a{font-size:14.5px;color:var(--g-600)}
+  .ab-info li a{border-bottom:2px solid var(--o-500);color:var(--ink);font-weight:700}
 </style>
 
 </head>
@@ -653,8 +730,8 @@
   <div class="wrap">
     <a href="index.html" class="logo"><img class="logo-img" src="images/portfolio/31727f77e8c4.webp" alt="holy pixel 디자인 스튜디오"></a>
     <div class="menu">
-      <a href="holypixel-about.html">소개</a>
-      <a href="holypixel-pricing.html" class="active">가격 안내</a>
+      <a href="holypixel-about.html" class="active">소개</a>
+      <a href="holypixel-pricing.html">가격 안내</a>
       <a href="holypixel-commerce.html">상업 디자인</a>
       <a href="holypixel-church.html">교회 디자인</a>
       <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
@@ -663,8 +740,8 @@
     <button class="burger" aria-label="메뉴"><span></span><span></span><span></span></button>
   </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="holypixel-about.html">소개</a>
-      <a href="holypixel-pricing.html" class="active">가격 안내</a>
+      <a href="holypixel-about.html" class="active">소개</a>
+      <a href="holypixel-pricing.html">가격 안내</a>
       <a href="holypixel-commerce.html">상업 디자인</a>
       <a href="holypixel-church.html">교회 디자인</a>
       <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
@@ -693,361 +770,107 @@
 </div>
 
 <!-- HERO -->
-<header class="header-sm">
+<header class="ab-hero">
   <div class="wrap">
-    <span class="eyebrow">PRICING</span>
-    <h1 class="hero" style="max-width:760px">디자인 의뢰 전, 예산부터<br>편하게 확인하세요.</h1>
-    <p class="hero-sub">홀리픽셀은 시작가와 패키지 기준가를 먼저 안내합니다.<br>정확한 견적은 작업 범위를 함께 확인한 뒤, 상담을 통해 안내드려요.</p>
-    <div class="hero-btns">
-      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">내 작업 견적 문의하기 →</a>
-      <a href="#estimate" class="btn btn-secondary">예상 견적 계산해보기 ↓</a>
+    <div>
+      <span class="ab-kicker">산업디자인 전문회사 홀리픽셀</span>
+      <h1>믿을 수 있는 <span class="hl">신뢰감</span>을 가진<br>홀리픽셀입니다.</h1>
+      <p class="hero-sub">브랜드 디자인 한 길만 걸어온 전문성으로, 고객과 브랜드가 만나고 대화하는 모든 자리에 홀리픽셀이 함께해요.</p>
+      <div class="hero-btns">
+        <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">카카오톡으로 상담하기 →</a>
+        <a href="https://www.instagram.com/holy_pixel?igsh=MWd6eWl6cW44cG1tYw%3D%3D" target="_blank" rel="noopener" class="btn btn-secondary">작업물 먼저 보기 →</a>
+      </div>
+    </div>
+    <div class="ab-stamp reveal" aria-label="산업디자인 전문회사 홀리픽셀">
+      <img class="cert" src="images/portfolio/b4d7465afb44.webp" alt="산업디자인전문회사 신고확인증 (한국디자인진흥원, 제 22779 호)">
+      <b>산업디자인 전문회사</b>
+      <span class="en">INDUSTRIAL DESIGN COMPANY</span>
+      <hr>
+      <p>로고 · 패키지 · 상세페이지 · 인쇄물<br>브랜드에 필요한 디자인을 한 곳에서</p>
     </div>
   </div>
 </header>
 
-
-
-<!-- 패키지 가격 -->
-<section class="section orange-bg">
+<!-- STATEMENT -->
+<section class="ab-statement">
   <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">PACKAGES</span>
-        <h2 class="sec">브랜드 준비 단계에 따른 맞춤 패키지</h2>
-      </div>
-    </div>
-
-    <div class="pkg3-grid">
-      <div class="pkg3-card reveal">
-        <div class="pkg3-cat">STARTER · 브랜드 첫 시작</div>
-        <div class="pkg3-tagline">로고 + 인쇄물 2종 디자인</div>
-        <div class="pkg3-price">65<span>만원~</span> <span class="pkg3-alt">따로 맡기면 <u>77만원</u> <b class="save-pct">16% 할인</b></span></div>
-        <ul class="pkg3-list">
-          <li>로고 (시안 2안)</li>
-          <li>로고 매뉴얼북 · 적용 목업</li>
-          <li>인쇄물 2종 (간판 디자인, 명함 등)</li>
-        </ul>
-        <div class="pkg3-terms">선금 50% · 수정 3회 · 2~3주</div>
-      </div>
-
-      <div class="pkg3-card dark reveal">
-        <div class="pkg3-cat">GROWTH · 가장 많이 찾는 구성</div>
-        <div class="pkg3-tagline">로고 + 패키지 2종 디자인</div>
-        <div class="pkg3-price">115<span>만원~</span> <span class="pkg3-alt">따로 맡기면 <u>132만원</u> <b class="save-pct">13% 할인</b></span></div>
-        <ul class="pkg3-list">
-          <li>로고 (시안 2안) · 매뉴얼북</li>
-          <li>+ 적용 목업</li>
-          <li>+ 명함 200매 무료</li>
-          <li>+ 패키지 2종 (용기, 단상자)</li>
-        </ul>
-        <div class="pkg3-terms">선금 50% · 수정 3회 · 3~4주</div>
-      </div>
-
-      <div class="pkg3-card reveal">
-        <div class="pkg3-cat">COMPLETE · 브랜드 완성</div>
-        <div class="pkg3-tagline">로고 + 패키지 3종 + 상세페이지 1종</div>
-        <div class="pkg3-price">190<span>만원~</span></div>
-        <div class="pkg3-alt-below">따로 맡기면 <u>230만원</u> <b class="save-pct">17% 할인</b></div>
-        <ul class="pkg3-list">
-          <li>로고 3종 · 로고 매뉴얼북</li>
-          <li>+ 브랜드 가이드북</li>
-          <li>+ 명함 200매 무료</li>
-          <li>+ 패키지 2종 · 상세페이지 1종</li>
-          <li>+ 제품 촬영 15컷 · 썸네일 2종</li>
-        </ul>
-        <div class="pkg3-terms">선금 50% · 수정 3회 · 4~6주</div>
-      </div>
-    </div>
-
-    <p class="pricing-note" style="text-align:left;margin:20px 0 0;color:#fff">패키지 상품에 패키지 디자인 추가 시 개별 단가의 80%</p>
+    <p class="big reveal">고객이 브랜드를 처음 만나는 순간부터<br>다시 찾게 되는 순간까지,<br><span>그 모든 길목에 홀리픽셀</span>이 있어요.</p>
   </div>
 </section>
 
-<!-- 정기구독 디자인 -->
-<section class="section tint">
-  <div class="wrap">
-    <div class="sub-intro reveal">
-      <span class="eyebrow">SUBSCRIPTION</span>
-      <h2 class="sec">스타트업 · 소규모 기업을 위한<br>디자인 구독 서비스</h2>
-
-      <p class="sub-q">수시로 발생하는 디자인 업무, 건당 외주 의뢰, 부담스러운 채용으로 해결하고 계신가요?</p>
-      <p class="sub-p">디자인 인력 채용은 높은 인건비와 비효율로 이어지고, 건별 외주는 비용 상승과 들쭉날쭉한 퀄리티를 만듭니다.<br>반복되는 복잡한 커뮤니케이션도 시간 낭비로 이어집니다.</p>
-
-      <p class="sub-q">홀리픽셀은 이 모든 고민을 해결합니다.</p>
-      <p class="sub-p">합리적인 디자인 구독 서비스를 통해 채용 없이 전담 디자이너를 바로 활용하세요.<br>예측 가능한 고정 비용으로 일관된 퀄리티의 디자인을 정기적으로 받아보실 수 있습니다.</p>
-
-      <p class="sub-strong">단순한 디자인 외주가 아닌, <b>가장 효율적인 디자인 파트너</b>로서 브랜드의 <b>지속적인 성장</b>을 지원합니다.</p>
-    </div>
-
-    <div class="sub-feature-grid reveal">
-      <div class="sub-feature-card">
-        <h3>비용 효율성</h3>
-        <p>디자이너 채용 시 발생하는 고정 비용을 절감합니다. 디자인 수요가 적은 달에는 구독 플랜을 유연하게 조정할 수 있어 비용 낭비가 없습니다.</p>
-      </div>
-      <div class="sub-feature-card">
-        <h3>유연하고 신속한 서비스</h3>
-        <p>필요할 때마다 디자인을 요청하고, 수정 사항을 빠르게 처리할 수 있습니다. 프로젝트 외주에서 발생하는 복잡한 커뮤니케이션과 지연을 줄여드립니다.</p>
-      </div>
-      <div class="sub-feature-card">
-        <h3>일관된 퀄리티와 전문성</h3>
-        <p>정해진 구독 비용으로 경험 많은 전문 디자이너를 활용하세요. 브랜드의 통일성을 잃지 않으면서 다양한 디자인을 효율적으로 제작할 수 있습니다.</p>
-      </div>
-    </div>
-
-    <div class="sub-price-bar reveal">
-      <span>3개월 단위 구독</span>
-      <b>월 55만원~</b>
-      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">구독 상담하기 →</a>
-      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn sub-trial-btn">1개월 무료 체험 · 50% 할인</a>
-    </div>
-    <p class="sub-scope-note reveal">제공 디자인 : 로고, 패키지, 상세페이지, 썸네일, 인쇄 디자인, 브랜드 디자인 등 — 자세한 항목은 상담 후 안내 가능합니다.</p>
-  </div>
-</section>
-
-<!-- 예상 견적 계산기 -->
-<section class="section est-sec" id="estimate">
-  <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">ESTIMATE</span>
-        <h2 class="sec">필요한 디자인만 골라<br>예상 견적 만들기</h2>
-      </div>
-      <p>서비스를 비교하고, 필요한 항목으로 예상 견적을 만들어보세요.</p>
-    </div>
-
-    <div class="est-notice reveal"><span class="px" aria-hidden="true"></span><p><b>검토용 구성 · 잠정 금액</b><span id="estRateNote"></span></p></div>
-
-    <div class="est-layout">
-      <div>
-        <div class="est-tabs" id="estTabs" role="tablist" aria-label="디자인 서비스"></div>
-        <div class="est-panel" id="estPanel" role="tabpanel" tabindex="0"></div>
-        <div class="est-mbar" aria-hidden="false">
-          <div><span>예상 합계 · 부가세 별도</span><strong id="estMPrice">0원</strong></div>
-          <a href="#estSum">구성 보기<em id="estMCount">0</em></a>
-        </div>
-      </div>
-      <aside class="est-sum" id="estSum" aria-label="예상 견적 요약"></aside>
-    </div>
-
-    <div class="est-guide reveal" aria-label="예상 견적 기준">
-      <article><span class="n">01</span><h4>선택한 범위로 합산</h4><p>선택한 유형의 단가에 디자인 종류 수를 곱합니다. 기획·촬영·감리는 선택할 때만 더해집니다.</p></article>
-      <article><span class="n">02</span><h4>제작 실비는 별도</h4><p>인쇄·용기·포장 제작비는 재질과 생산 수량이 정해진 뒤 별도로 확인합니다.</p></article>
-      <article><span class="n">03</span><h4>상담 후 최종 확정</h4><p>규격 확대, 추가 제품, 원고 분량, 특수 작업, 긴급 일정에 따라 금액이 달라질 수 있습니다.</p></article>
-    </div>
-    <p class="est-rev">수정 3회는 선택한 시안 안에서의 조정 기준입니다. 촬영 보정은 1회이며, 새 콘셉트·추가 시안·재촬영은 별도 범위입니다.</p>
-    <div id="estLive" class="sr-only" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></div>
-  </div>
-</section>
-
-<!-- 시안·수정·결제 기준 -->
-<section class="section tint">
-  <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">CRITERIA</span>
-        <h2 class="sec">작업별 시안과 수정 횟수 한눈에 보기</h2>
-      </div>
-    </div>
-
-    <div class="price-table-wrap reveal">
-      <table class="price-table">
-        <thead>
-          <tr>
-            <th>작업</th>
-            <th>시안</th>
-            <th>수정</th>
-            <th>비고</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tbl-name">로고</td>
-            <td>2안</td>
-            <td>3회</td>
-            <td class="tbl-sub">—</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">패키지 2종 세트</td>
-            <td>2안</td>
-            <td>3회</td>
-            <td class="tbl-sub">인쇄 전 교정 1회 · 인쇄 데이터 포함</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">상세페이지</td>
-            <td>1안</td>
-            <td>3회</td>
-            <td class="tbl-sub">길이 제한 없음 · 납품 후 7일 오탈자 무료</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">인쇄물</td>
-            <td>2안</td>
-            <td>3회</td>
-            <td class="tbl-sub">배리에이션은 1회</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">제품 촬영 · 썸네일</td>
-            <td>—</td>
-            <td>보정 수정 1회</td>
-            <td class="tbl-sub">재촬영은 별도 견적</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="etc-bar reveal" style="background:var(--white);color:var(--ink);border:2px solid var(--ink)">
-      <div><b>결제</b>선금 50% · 잔금 50%</div>
-      <div><b>추가 수정</b>회당 3만원</div>
-      <div><b>시안 재작업</b>초기 시안 비용의 20~30%</div>
-    </div>
-  </div>
-</section>
-
-
-<!-- 진행 과정 -->
+<!-- ONE WAY -->
 <section class="section">
   <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">PROCESS</span>
-        <h2 class="sec">상담부터 납품까지 네 단계</h2>
+    <div class="ab-split">
+      <div class="reveal">
+        <span class="eyebrow">ABOUT</span>
+        <h2 class="sec">홀리픽셀은<br>브랜드 디자인,<br>한 길만 걸어왔어요.</h2>
+      </div>
+      <div class="ab-body reveal">
+        <p>시작은 언제나 <strong>꼼꼼한 사전 인터뷰</strong>예요. 대표님이 어떤 마음으로 브랜드를 만들었는지, 누구에게 닿고 싶은지 충분히 듣고 나서 디자인을 시작해요.</p>
+        <p>작업하는 동안에도 소통은 멈추지 않아요. 그렇게 브랜드가 원래 가지고 있던 특징과 가치를 디자인에 고스란히 담아요.</p>
+        <p>잠깐 반짝하는 유행이나 트렌드를 좇기보다, <strong>시간이 지나도 브랜드다움을 지켜주는 디자인</strong>을 만들고 싶어요.</p>
       </div>
     </div>
-    <div class="proc4-grid">
-      <div class="proc4-card reveal">
-        <span class="proc4-num">1</span>
-        <h3>상담 · 진단</h3>
-        <p>15분 무료 통화로 제품과 목표를 확인하고, 맞는 상품과 견적을 안내합니다.</p>
-      </div>
-      <div class="proc4-card reveal">
-        <span class="proc4-num">2</span>
-        <h3>계약 · 선금</h3>
-        <p>작업 범위와 일정을 확정하고 선금으로 일정을 잡습니다. (STARTER 100%, 그 외 50%)</p>
-      </div>
-      <div class="proc4-card reveal">
-        <span class="proc4-num">3</span>
-        <h3>디자인 · 촬영</h3>
-        <p>시안 확인과 작업별 정해진 횟수의 수정. 디자인 톤에 맞춰 제품 촬영까지 진행합니다.</p>
-      </div>
-      <div class="proc4-card reveal">
-        <span class="proc4-num">4</span>
-        <h3>납품 · 잔금</h3>
-        <p>원본 파일, 인쇄용 데이터, 촬영 보정본을 전달하고 잔금을 정산합니다.</p>
-      </div>
+
+    <div class="ab-vals">
+      <div class="ab-val reveal"><span class="ico" aria-hidden="true"><i></i></span><h3>꼼꼼한 사전 인터뷰</h3><p>브랜드의 이야기와 목표를 먼저 정리하고, 그 방향 위에서 디자인을 시작해요.</p></div>
+      <div class="ab-val reveal"><span class="ico" aria-hidden="true"><i></i></span><h3>끝까지 이어지는 소통</h3><p>시안부터 수정, 납품까지 디자이너와 직접 이야기하며 함께 완성해요.</p></div>
+      <div class="ab-val reveal"><span class="ico" aria-hidden="true"><i></i></span><h3>오래 가는 디자인</h3><p>단순하지만 쉽게 기억되는, 기본에 충실한 디자인으로 브랜드 가치를 지켜요.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 견적이 달라지는 기준 -->
-<section class="section tint">
+<!-- WORK -->
+<section class="section ab-work" id="work">
   <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">HOW IT WORKS</span>
-        <h2 class="sec">같은 항목도, 이런 이유로 달라져요</h2>
-      </div>
-      <p>견적은 정해진 공식이 아니라, 작업의 실제 무게를 반영한 결과예요.</p>
+    <div class="head-c reveal">
+      <span class="eyebrow">OUR WORK</span>
+      <h2 class="sec">홀리픽셀의 디자인은<br>브랜드의 방향과 가치를 담아요.</h2>
+      <p>로고·패키지·상세페이지 작업으로 쌓아온 경험과 전문성, 그리고 젊은 감각이 홀리픽셀의 자신감이에요. 심플하지만 쉽게 기억되는, 기본에 충실하면서도 힘 있는 브랜드 디자인을 위해 오늘도 고민하고 또 고민할게요.</p>
     </div>
-
-    <div class="criteria-grid reveal">
-      <div class="criteria-item">
-        <span class="criteria-num">01</span>
-        <b>작업 범위</b>
-        <span>단품인지, 시리즈물인지에 따라 달라집니다.</span>
-      </div>
-      <div class="criteria-item">
-        <span class="criteria-num">02</span>
-        <b>시안 개수</b>
-        <span>기본 1~2안 기준이며, 추가 시안은 별도 협의됩니다.</span>
-      </div>
-      <div class="criteria-item">
-        <span class="criteria-num">03</span>
-        <b>수정 횟수</b>
-        <span>기본 2회 수정이 포함되며, 큰 폭의 방향 변경은 별도 협의합니다.</span>
-      </div>
-      <div class="criteria-item">
-        <span class="criteria-num">04</span>
-        <b>일정</b>
-        <span>촉박한 일정의 급행 제작은 별도 조율이 필요해요.</span>
-      </div>
-      <div class="criteria-item">
-        <span class="criteria-num">05</span>
-        <b>인쇄 · 촬영 · 분량</b>
-        <span>인쇄 사양, 촬영 유무, 상세페이지 길이에 따라 달라집니다.</span>
-      </div>
+    <div class="ab-grid">
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/1085567776e0.webp')" aria-label="Onue — 디퓨저 브랜딩"><figcaption><span>디퓨저 브랜딩</span><b>Onue</b></figcaption></a>
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/4b58407b4d25.webp')" aria-label="Mouvi — 네일 브랜딩"><figcaption><span>네일 브랜딩</span><b>Mouvi</b></figcaption></a>
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/443668ef8f0e.webp')" aria-label="Five Tables — 카페 브랜딩"><figcaption><span>카페 브랜딩</span><b>Five Tables</b></figcaption></a>
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/baa9e06761ac.webp')" aria-label="Myeongwang 면광 — 라멘 브랜딩"><figcaption><span>라멘 브랜딩</span><b>Myeongwang 면광</b></figcaption></a>
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/bf0b99f6a3e4.webp')" aria-label="Shift Coffee Station — 카페 브랜딩"><figcaption><span>카페 브랜딩</span><b>Shift Coffee Station</b></figcaption></a>
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/3b865ab77cbd.webp')" aria-label="Ieum — 교회 브랜딩"><figcaption><span>교회 브랜딩</span><b>Ieum</b></figcaption></a>
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/2eb928eb9981.webp')" aria-label="Waggle Dog — 애견 브랜딩"><figcaption><span>애견 브랜딩</span><b>Waggle Dog</b></figcaption></a>
+      <a href="holypixel-commerce.html" class="ab-tile reveal" style="background-image:url('images/portfolio/dfc632f13c36.webp')" aria-label="Oréline — 퍼퓸 브랜딩"><figcaption><span>퍼퓸 브랜딩</span><b>Oréline</b></figcaption></a>
     </div>
-
-    <p class="pricing-note" style="text-align:left;margin:26px 0 0">안내된 금액은 기본 구성을 기준으로 합니다. 작업의 범위와 일정에 따라 최종 견적은 함께 조율해 드려요.</p>
+    <div class="more reveal"><a href="holypixel-commerce.html" class="btn">포트폴리오 전체 보기 →</a></div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section tint">
+<!-- OPEN / CONTACT -->
+<section class="section tint ab-open">
   <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">FAQ</span>
-        <h2 class="sec">자주 묻는 질문</h2>
-      </div>
-      <p>가격과 진행 방식에 대해 자주 여쭤보시는 내용을 모았어요.</p>
-    </div>
-
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <span class="faq-q">Q</span>
-        <div>
-          <b>견적은 언제 확정되나요?</b>
-          <p>카카오톡 또는 문의 폼으로 자료를 보내주시면, 확인 후 24시간 이내에 견적을 안내드려요.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <span class="faq-q">Q</span>
-        <div>
-          <b>수정은 몇 회까지 가능한가요?</b>
-          <p>기본 2회 무료 수정이 포함돼요. 큰 폭의 방향 변경은 별도 협의로 진행됩니다.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <span class="faq-q">Q</span>
-        <div>
-          <b>원본 파일도 받을 수 있나요?</b>
-          <p>네, 작업이 완료되면 원본 파일을 함께 전달해 드려요.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <span class="faq-q">Q</span>
-        <div>
-          <b>급한 일정도 가능한가요?</b>
-          <p>가능하지만 일정 조율이 필요해요. 문의 주실 때 희망 일정을 함께 알려주세요.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <span class="faq-q">Q</span>
-        <div>
-          <b>촬영이나 인쇄도 함께 가능한가요?</b>
-          <p>네, 제품 촬영과 인쇄까지 함께 진행할 수 있어요. 상세페이지 · 패키지 문의 시 함께 안내드려요.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <span class="faq-q">Q</span>
-        <div>
-          <b>교회 디자인은 세트로도 가능한가요?</b>
-          <p>네, 절기·행사에 맞춘 대형 행사 세트로 진행 가능해요. 필요한 항목을 알려주시면 구성해 드려요.</p>
-        </div>
-      </div>
+    <h2 class="sec reveal">디자인이 낯설고 어려운 대표님께<br>홀리픽셀은 언제나 열려 있어요.</h2>
+    <div class="ab-contact reveal">
+      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="ab-kakao">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.3c0 2.6 1.7 4.9 4.3 6.2-.2.7-.7 2.5-.8 2.9 0 0 0 .2.1.3.1 0 .2 0 .3-.1.3-.2 2.8-1.9 3.5-2.4.4.1.9.1 1.4.1 5.1 0 9.2-3.3 9.2-7.3S17.1 3 12 3z"/></svg>
+        <div><b>카카오톡 채널로<br>바로 상담하기</b><span>디자이너가 직접 답변드려요</span></div>
+        <span class="go"><span>pf.kakao.com/_xjyfNn</span><span>→</span></span>
+      </a>
+      <ul class="ab-info">
+        <li><b>상담 방법</b><span>카카오톡 채널 1:1 채팅으로 편하게 문의해 주세요.</span></li>
+        <li><b>준비하면 좋아요</b><span>브랜드 소개, 필요한 디자인, 참고 이미지, 희망 일정</span></li>
+        <li><b>작업 과정</b><a href="https://blog.naver.com/coco9393_/" target="_blank" rel="noopener">네이버 블로그에서 보기</a></li>
+        <li><b>인스타그램</b><a href="https://www.instagram.com/holy_pixel?igsh=MWd6eWl6cW44cG1tYw%3D%3D" target="_blank" rel="noopener">@holy_pixel</a></li>
+      </ul>
     </div>
   </div>
 </section>
 
-
-<!-- 문의 CTA -->
+<!-- CTA -->
 <section class="cta">
   <div class="wrap">
-    <span class="eyebrow" style="justify-content:center;color:var(--g-300)">GET A QUOTE</span>
-    <h2>정확한 금액이 <em>궁금하시다면</em></h2>
-    <p>자료 몇 가지만 보내주셔도 충분해요. 아직 방향이 안 잡히셨어도 괜찮습니다 — 이야기 나누면서 정해가요.</p>
+    <span class="eyebrow" style="justify-content:center;color:var(--g-300)">CONTACT</span>
+    <h2>홀리픽셀에 문의하시면<br><em>언제든 디자이너와</em> 상담할 수 있어요.</h2>
+    <p>아직 방향이 정해지지 않았어도 괜찮아요. 이야기 나누면서 함께 정해가요.</p>
     <div class="hero-btns" style="justify-content:center">
-      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">상업 디자인 의뢰하기 →</a>
-      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-secondary" style="background:transparent;color:#fff;border-color:#fff">교회 디자인 의뢰하기 →</a>
+      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--o-500);color:var(--ink);border-color:var(--o-500);box-shadow:5px 5px 0 #fff">빠른 상담 요청 →</a>
     </div>
   </div>
 </section>
@@ -1086,151 +909,6 @@
       m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.classList.remove('active');});});
     }
   })();
-</script>
-<script>
-(function(){
-  /* ===== 예상 견적 계산기 ===== */
-  var RATE_NOTE='기존 제안안을 바탕으로 만든 검토용 구성과 잠정 금액입니다. Holy Pixel 확정 가격표가 아니며, 실제 범위와 견적은 상담 후 확정됩니다.';
-  var LOGO={plans:[
-    {id:'basic',label:'기본형',price:330000,purpose:'핵심 로고가 필요한 브랜드',scope:['로고 + 명함 + 로고 매뉴얼북','시안 2안 · 수정 3회']},
-    {id:'premium',label:'프리미엄형',price:770000,purpose:'일관된 브랜드 표현이 필요한 브랜드',scope:['로고 + 명함 + 로고 매뉴얼북','브랜드 가이드북 + 컬러 시스템 + 서체 시스템','응용 디자인 5종','로고 시안 4안 · 수정 5회']}
-  ]};
-  var SERVICES=[
-    {id:'label',category:'package',name:'라벨·스티커·용기',description:'제품에 붙이는 라벨·스티커, 용기 표면 그래픽',unit:'제품 1종',multiple:5,options:[{id:'one',label:'1면',price:150000},{id:'both',label:'앞뒷면',price:250000}],scope:['시안 2안 · 수정 3회 · 교정 1회','인쇄 데이터 포함'],excluded:'인쇄·부착·용기 구매·금형은 별도'},
-    {id:'box',category:'package',name:'단상자',description:'제품 한 개를 담는 접이식 상자 디자인',unit:'제품 1종 · 전개도 1규격',multiple:5,options:[{id:'four',label:'4면',price:350000},{id:'six',label:'6면',price:450000}],scope:['시안 2안 · 수정 3회 · 교정 1회','인쇄 데이터 포함'],excluded:'상자 제작·구조 설계·칼선 개발·샘플 제작은 별도'},
-    {id:'combo',category:'package',name:'복합 패키지',description:'라벨 + 용기 + 파우치 + 단상자',unit:'제품 1종 · 4종 구성',multiple:5,options:[{id:'set',label:'4종 세트',price:770000}],scope:['시안 2안 · 수정 3회 · 교정 1회','인쇄 데이터 포함'],excluded:'패키지 제작·칼선 개발·동판비·샘플 제작은 별도'},
-    {id:'detail',category:'detail',name:'상세페이지',description:'필요한 범위에 맞춰 구성을 선택하세요',unit:'제품 1종',options:[{id:'design',label:'디자인만',price:350000,fixed:true},{id:'plan',label:'기획+디자인',price:600000,fixed:true},{id:'full',label:'촬영+기획+디자인',price:990000}],scope:['길이 제한 없음 · 시안 1안 · 수정 3회','납품 후 7일 오탈자 무료'],excluded:'쇼핑몰 업로드는 미포함'},
-    {id:'photo',category:'detail',name:'제품 촬영',description:'실물 제품을 촬영하고 최종 컷을 보정',unit:'촬영 4시간',options:[{id:'h4',label:'4시간',price:700000,fixed:true}],scope:['보정 수정 1회'],excluded:'재촬영은 별도 견적'},
-    {id:'thumb',category:'detail',name:'썸네일',description:'판매 채널용 대표 이미지',unit:'장당',multiple:10,qtyUnit:'장',options:[{id:'one',label:'장당',price:30000,fixed:true}],scope:['보정 수정 1회'],excluded:'재촬영은 별도 견적'},
-    {id:'poster',category:'print',name:'절기 포스터',description:'부활절 · 추수감사절 · 성탄절 등',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:150000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'종이·인쇄·후가공·배송은 별도'},
-    {id:'banner',category:'print',name:'현수막 디자인',description:'사이즈 · 인쇄 사양에 따라 변동',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:150000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'원단·출력·마감·배송·설치는 별도'},
-    {id:'leaflet',category:'print',name:'리플렛 디자인',description:'정기 발행물 기본 구성',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:200000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·접지·배송은 별도'},
-    {id:'postcard',category:'print',name:'엽서 디자인',description:'행사 안내 · 초대 · 감사 엽서',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:80000,fixed:true}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·배송은 별도'},
-    {id:'envelope',category:'print',name:'헌금봉투 디자인',description:'교회 헌금봉투 디자인',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:100000,fixed:true}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·배송은 별도'},
-    {id:'church',category:'print',name:'교회 브랜딩, 행사 디자인',description:'로고 브랜딩부터 포스터·현수막, 웹사이트·주보·굿즈까지',unit:'1건',options:[{id:'b',label:'기준가',price:330000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·제작비는 별도'},
-    {id:'eventset',category:'print',name:'대형 행사 세트',description:'포스터 + 현수막 + 택 2종 (배너 · PPT · SNS 피드 · 엽서 등)',unit:'행사 1건',options:[{id:'b',label:'세트',price:550000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·제작비는 별도'}
-  ];
-  var SUPERVISION=100000;
-  var CATS=[
-    {id:'logo',name:'로고',en:'LOGO',desc:'브랜드의 첫인상을 만드는 기본부터, 사용 가이드까지.'},
-    {id:'package',name:'패키지',en:'PACKAGE',desc:'제품에 필요한 포장 유형을 각각 선택하세요.'},
-    {id:'detail',name:'상세페이지',en:'PRODUCT PAGE',desc:'상세페이지 구성을 고르고, 촬영·썸네일은 따로 추가하세요.'},
-    {id:'print',name:'교회 디자인',en:'CHURCH',desc:'필요한 교회 디자인을 고르고, 현장 감리는 따로 선택하세요.'}
-  ];
-  var KAKAO='https://pf.kakao.com/_xjyfNn';
-  var state={logo:null,choices:{},supervision:false},tab='logo';
-  var $=function(id){return document.getElementById(id)};
-  var esc=function(v){return String(v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
-  var nf=new Intl.NumberFormat('ko-KR',{maximumFractionDigits:1});
-  var won=function(n){return new Intl.NumberFormat('ko-KR').format(n)+'원'};
-  var man=function(n,fixed){return n===0?'0원':nf.format(n/10000)+'만 원'+(fixed?'':'~')};
-  var feats=function(a){return '<ul class="est-feats">'+a.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ul>'};
-  var svc=function(id){return SERVICES.filter(function(s){return s.id===id})[0]};
-  var opt=function(s,id){return s.options.filter(function(o){return o.id===id})[0]||s.options[0]};
-
-  function calc(){
-    var lines=[];
-    if(state.logo){var lp=LOGO.plans.filter(function(p){return p.id===state.logo})[0];
-      lines.push({id:'logo',category:'logo',name:'로고',sub:lp.label,amount:lp.price,fixed:false,unit:'브랜드 1개',scope:lp.scope});}
-    SERVICES.forEach(function(s){var c=state.choices[s.id];if(!c)return;var o=opt(s,c.opt);
-      var sub=(s.options.length>1?o.label:'')+(c.quantity>1?(s.options.length>1?' · ':'')+c.quantity+(s.qtyUnit||'종'):'');
-      lines.push({id:s.id,category:s.category,name:s.name,sub:sub,amount:o.price*c.quantity,fixed:!!o.fixed,unit:s.unit,qty:c.quantity,qtyUnit:s.qtyUnit||'종',scope:s.scope});});
-    var printSel=lines.some(function(l){return l.category==='print'});
-    if(state.supervision&&printSel)lines.push({id:'supervision',category:'print',name:'현장 인쇄 감리',sub:'',amount:SUPERVISION,fixed:false,unit:'한 장소 · 한 번 방문 · 2시간 이내',scope:['색상·재질·샘플 확인','인천·서울 지역 기준 · 출장 추가 비용 별도']});
-    var sub=lines.reduce(function(a,l){return a+l.amount},0),vat=Math.round(sub*.1);
-    var fixed=lines.length>0&&lines.every(function(l){return l.fixed});
-    return {lines:lines,sub:sub,vat:vat,total:sub+vat,fixed:fixed,printSel:printSel};
-  }
-  function remove(id){
-    if(id==='logo')state.logo=null;
-    else if(id==='supervision')state.supervision=false;
-    else{delete state.choices[id];
-      if(!SERVICES.some(function(s){return s.category==='print'&&state.choices[s.id]}))state.supervision=false;}
-  }
-  function card(s){
-    var c=state.choices[s.id],o=opt(s,c?c.opt:null),q=c?c.quantity:1,multi=s.options.length>1;
-    var seg=multi?'<div class="est-seg" style="grid-template-columns:repeat('+s.options.length+',1fr)" role="radiogroup" aria-label="'+s.name+' 옵션">'+s.options.map(function(x){
-      return '<label class="'+(o.id===x.id?'on':'')+'" for="est-'+s.id+'-'+x.id+'"><input type="radio" name="est-opt-'+s.id+'" id="est-'+s.id+'-'+x.id+'" value="'+x.id+'" data-opt="'+s.id+'" '+(o.id===x.id?'checked':'')+'>'+x.label+'</label>'}).join('')+'</div>':'';
-    var qty=s.multiple?'<select class="est-qty" id="est-qty-'+s.id+'" data-qty="'+s.id+'" aria-label="'+s.name+' 수량">'+Array.from({length:s.multiple},function(_,i){return i+1}).map(function(n){return '<option value="'+n+'" '+(n===q?'selected':'')+'>'+n+(s.qtyUnit||'종')+'</option>'}).join('')+'</select>':'';
-    var opts=(seg||qty)?'<div class="est-opts">'+seg+qty+'</div>':'';
-    return '<article class="est-card'+(c?' on':'')+(s.options.length>2?' est-wide':'')+'"><div class="est-card-top"><label for="est-choose-'+s.id+'"><input type="checkbox" id="est-choose-'+s.id+'" data-choice="'+s.id+'" '+(c?'checked':'')+'>'+s.name+'</label><span class="est-range">'+man(o.price,o.fixed)+'</span></div>'
-      +'<p class="est-desc">'+esc(s.description)+'</p>'+opts+'<p class="est-unit">단가 기준 · '+esc(s.unit)+'</p>'+feats(s.scope)
-      +'<p class="est-excl"><span>별도</span>'+esc(s.excluded)+'</p></article>';
-  }
-  function grid(cat){return '<div class="est-grid">'+SERVICES.filter(function(s){return s.category===cat}).map(card).join('')+'</div>'}
-  function panel(){
-    var cat=CATS.filter(function(c){return c.id===tab})[0],idx=CATS.indexOf(cat),q=calc();
-    var h='<div class="est-ph"><span class="num">0'+(idx+1)+'</span><div><h3>'+cat.name+'<small>'+cat.en+'</small></h3><p>'+cat.desc+'</p></div></div>';
-    if(tab==='logo'){
-      h+='<div class="est-plans" role="radiogroup" aria-label="로고 서비스 유형">'+LOGO.plans.map(function(p){var on=state.logo===p.id;
-        return '<label for="est-logo-'+p.id+'" class="est-plan'+(on?' on':'')+'"><div class="est-plan-top"><span class="est-tier'+(p.id==='premium'?' pro':'')+'">'+p.label+'</span><input type="radio" id="est-logo-'+p.id+'" name="est-logo" value="'+p.id+'" data-logo '+(on?'checked':'')+'></div>'
-          +'<p class="purpose">'+p.purpose+'</p><p class="price">'+man(p.price)+'<small>브랜드 1개 기준</small></p>'+feats(p.scope)
-          +'<span class="pick">'+(on?'■ 선택됨':p.label+' 선택')+'</span></label>'}).join('')+'</div>'
-        +'<div class="est-deselect"><button type="button" data-remove="logo" '+(state.logo?'':'disabled')+'>로고 선택 해제</button></div>'
-        +'<p class="est-note"><span>두 유형 모두 <b>최종 로고 1개</b>를 완성합니다. 네이밍, 상표 출원, 인쇄·제작비는 별도입니다.</span></p>';
-    }else if(tab==='package'){
-      h+=grid('package')+'<p class="est-note"><span><b>각 항목은 독립된 디자인입니다.</b> 수량은 인쇄 부수가 아닌 제품·디자인 종류 수입니다. 패키지 상품에 패키지 디자인 추가 시 개별 단가의 80%로 진행됩니다.</span></p>';
-    }else if(tab==='detail'){
-      h+=grid('detail')+'<p class="est-note"><span><b>맞춤 브랜딩</b>은 상담 후 견적으로 안내드려요.</span></p>';
-    }else{
-      h+=grid('print')
-        +'<div class="est-sup'+(state.supervision?' on':'')+'"><label for="est-sup"><input type="checkbox" id="est-sup" '+(state.supervision?'checked':'')+' '+(q.printSel?'':'disabled')+'><span><strong>현장 인쇄 감리 추가</strong><small>기본 금액에 미포함</small></span><b>'+man(SUPERVISION)+'</b></label>'
-        +'<p>한 장소 · 1회 방문 · 2시간 이내 / 인천·서울 기준</p><p>색상·재질·샘플을 현장에서 확인합니다. 원거리 출장비, 추가 방문, 인쇄 실비는 별도입니다.</p>'+(q.printSel?'':'<span class="hint">디자인 1종 이상 선택하면 추가할 수 있어요.</span>')+'</div>'
-        +'<p class="est-note"><span><b>교회 디자인 시안은 2종, 무료 수정 2회를 기본제공으로 합니다.</b> 인쇄 부수·종이·후가공·배송·설치 비용은 별도 견적입니다.</span></p>';
-    }
-    return h+'<div class="est-foot"><span>항목마다 옵션과 수량을 선택할 수 있어요.</span><span>디자인비 기준 · 부가세 별도</span></div>';
-  }
-  function summary(){
-    var q=calc(),n=q.lines.filter(function(l){return l.id!=='supervision'}).length,lines;
-    if(q.lines.length){
-      lines=CATS.map(function(c){var it=q.lines.filter(function(l){return l.category===c.id});if(!it.length)return '';
-        return '<div class="est-group"><h4>'+c.en+' · '+c.name+'</h4>'+it.map(function(l){
-          return '<div class="est-line"><div class="est-line-top"><b>'+l.name+(l.sub?'<small>'+esc(l.sub)+'</small>':'')+'</b><button type="button" class="est-x" data-remove="'+l.id+'" aria-label="'+l.name+' 선택 해제">×</button></div>'
-            +'<p class="r">'+man(l.amount,l.fixed)+'</p><details data-line="'+l.id+'"><summary>예상 제공 범위</summary><span class="u">'+esc(l.unit)+(l.qty>1?' × '+l.qty+l.qtyUnit:'')+'</span><ul>'+l.scope.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ul></details></div>'}).join('')+'</div>';}).join('');
-    }else lines='<div class="est-empty"><span class="px3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><b>어떤 디자인이 필요하세요?</b><span>항목을 선택하면 구성과 금액이<br>여기에 차곡차곡 담겨요.</span></div>';
-    return '<div class="est-sum-head"><div><span class="k">YOUR ESTIMATE</span><h3>선택한 구성<span>'+n+'</span></h3></div><button type="button" class="est-reset" data-reset aria-label="모든 선택 초기화" '+(q.lines.length?'':'disabled')+'>초기화</button></div>'
-      +'<div class="est-lines">'+lines+'</div>'
-      +'<div class="est-totals"><p class="lbl">예상 합계<span>부가세 별도</span></p><p class="big">'+man(q.sub,q.fixed)+'</p><div class="est-tax"><span>부가세 10%</span><span>'+man(q.vat,q.fixed)+'</span></div><div class="est-tax inc"><span>부가세 포함</span><strong>'+man(q.total,q.fixed)+'</strong></div><p class="est-warn">인쇄·제작 실비와 별도 비용은 합계에 포함되지 않습니다.</p></div>'
-      +'<div class="est-sum-foot">상담 전 참고 금액입니다.<br>자료·규격·수량·작업 난이도에 따라 최종 견적이 달라집니다.<a href="'+KAKAO+'" target="_blank" rel="noopener" class="btn">이 구성으로 상담하기 →</a></div>';
-  }
-  function render(){
-    var q=calc(),fid=document.activeElement&&document.activeElement.id;
-    var opened=[].slice.call(document.querySelectorAll('#estSum details[open]')).map(function(d){return d.dataset.line});
-    $('estTabs').innerHTML=CATS.map(function(c){var n=q.lines.filter(function(l){return l.category===c.id&&l.id!=='supervision'}).length;
-      return '<button type="button" id="est-tab-'+c.id+'" class="est-tab" role="tab" aria-selected="'+(tab===c.id)+'" aria-controls="estPanel" tabindex="'+(tab===c.id?0:-1)+'" data-tab="'+c.id+'"><span class="en">'+c.en+'</span><span class="ko">'+c.name+'</span>'+(n?'<span class="cnt">'+n+'</span>':'')+'</button>'}).join('');
-    $('estPanel').setAttribute('aria-labelledby','est-tab-'+tab);
-    $('estPanel').innerHTML=panel();
-    $('estSum').innerHTML=summary();
-    opened.forEach(function(id){var d=$('estSum').querySelector('details[data-line="'+id+'"]');if(d)d.open=true;});
-    var cnt=q.lines.filter(function(l){return l.id!=='supervision'}).length;
-    $('estMPrice').textContent=man(q.sub,q.fixed);$('estMCount').textContent=cnt;
-    if(fid&&$(fid))$(fid).focus({preventScroll:true});
-    $('estLive').textContent='선택 '+cnt+'개, 예상 합계 '+won(q.sub)+(q.fixed?'':'부터')+', 부가세 별도';
-  }
-  function choose(id,o,qty){state.choices[id]={opt:o,quantity:qty};render();}
-  var root=$('estimate');
-  root.addEventListener('change',function(e){
-    var el=e.target,c;
-    if(el.hasAttribute('data-logo')){state.logo=el.value;render();}
-    else if(el.dataset.choice){var id=el.dataset.choice;if(el.checked)choose(id,svc(id).options[0].id,1);else{remove(id);render();}}
-    else if(el.dataset.opt){c=state.choices[el.dataset.opt];choose(el.dataset.opt,el.value,c?c.quantity:1);}
-    else if(el.dataset.qty){c=state.choices[el.dataset.qty];choose(el.dataset.qty,c?c.opt:svc(el.dataset.qty).options[0].id,Number(el.value));}
-    else if(el.id==='est-sup'){state.supervision=el.checked;render();}
-  });
-  root.addEventListener('click',function(e){
-    var b=e.target.closest('button');if(!b||b.disabled)return;
-    if(b.dataset.tab){tab=b.dataset.tab;render();}
-    else if(b.dataset.remove){remove(b.dataset.remove);render();}
-    else if(b.hasAttribute('data-reset')){state={logo:null,choices:{},supervision:false};render();}
-  });
-  root.addEventListener('keydown',function(e){
-    var t=e.target;if(!t.dataset||!t.dataset.tab||['ArrowLeft','ArrowRight','Home','End'].indexOf(e.key)<0)return;
-    e.preventDefault();var i=CATS.map(function(c){return c.id}).indexOf(tab);
-    tab=CATS[e.key==='Home'?0:e.key==='End'?3:(i+(e.key==='ArrowRight'?1:3))%4].id;render();$('est-tab-'+tab).focus();
-  });
-  $('estRateNote').textContent=RATE_NOTE;
-  render();
-})();
 </script>
 </body>
 </html>

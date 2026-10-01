@@ -188,6 +188,9 @@
   .btn-hero-cta{background:#FF5A00;color:#0A0806;font-size:16px;font-weight:800;padding:15px 28px}
   .btn-hero-cta:hover{opacity:.85}
   @media(max-width:560px){.btn-hero-cta{font-size:14px;padding:13px 22px}}
+  .svc-go{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:44px}
+  @media(max-width:560px){.svc-go{flex-direction:column}.svc-go .btn{width:100%;justify-content:center}}
+  #work .head-row{margin-bottom:36px}
 
   .ticker{position:relative;z-index:1;margin-top:60px;border-top:1px solid var(--g-300);border-bottom:1px solid var(--g-300);overflow:hidden;white-space:nowrap;background:var(--ink)}
   .ticker .track{display:inline-flex;gap:40px;padding:13px 0;animation:scroll 24s linear infinite;font-family:var(--mono);font-weight:700;font-size:14px;color:var(--white);letter-spacing:.05em}
@@ -435,19 +438,21 @@
   <div class="wrap">
     <a href="#" class="logo"><img class="logo-img" src="images/portfolio/31727f77e8c4.webp" alt="holy pixel 디자인 스튜디오"></a>
     <div class="menu">
-      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
+      <a href="holypixel-about.html">소개</a>
+      <a href="holypixel-pricing.html">가격 안내</a>
       <a href="holypixel-commerce.html">상업 디자인</a>
       <a href="holypixel-church.html">교회 디자인</a>
-      <a href="holypixel-pricing.html">가격 안내</a>
+      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
     </div>
     <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="nav-cta">디자인 의뢰</a>
     <button class="burger" aria-label="메뉴"><span></span><span></span><span></span></button>
   </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
+      <a href="holypixel-about.html">소개</a>
+      <a href="holypixel-pricing.html">가격 안내</a>
       <a href="holypixel-commerce.html">상업 디자인</a>
       <a href="holypixel-church.html">교회 디자인</a>
-      <a href="holypixel-pricing.html">가격 안내</a>
+      <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
       <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener">디자인 의뢰 →</a>
     </div>
 </nav>
@@ -538,6 +543,7 @@
             <p>모든 표현법에 대응 가능한 프리미엄 로고 디자인</p>
           </div>
         </div>
+        <div class="svc4-bar">33만원~</div>
       </a>
 
       <a href="holypixel-pricing.html" class="svc4-tile reveal">
@@ -548,6 +554,7 @@
             <p>브랜드 기획부터 로고, 인쇄물, 가이드북까지 솔루션</p>
           </div>
         </div>
+        <div class="svc4-bar">견적 문의</div>
       </a>
 
       <a href="holypixel-pricing.html" class="svc4-tile reveal">
@@ -558,6 +565,7 @@
             <p>구매를 설득하는 한 장의 페이지</p>
           </div>
         </div>
+        <div class="svc4-bar">35만원~</div>
       </a>
 
       <a href="holypixel-pricing.html" class="svc4-tile reveal">
@@ -568,7 +576,12 @@
             <p>로고 브랜딩부터 절기·행사 디자인까지</p>
           </div>
         </div>
+        <div class="svc4-bar">33만원~</div>
       </a>
+    </div>
+    <div class="svc-go reveal">
+      <a href="holypixel-commerce.html" class="btn btn-hero-cta">상업 디자인 보러가기 →</a>
+      <a href="holypixel-church.html" class="btn btn-hero-cta">교회 디자인 보러가기 →</a>
     </div>
   </div>
 </section>
@@ -685,6 +698,14 @@
 
 <!-- FEATURED WORK -->
 <section id="work" class="feat">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div>
+        <span class="eyebrow">Our Work</span>
+        <h2 class="sec">포트폴리오</h2>
+      </div>
+    </div>
+  </div>
   <div class="feat-grid">
       <div class="feat-card reveal" style="cursor:pointer" data-extra-images='["images/portfolio/6bf0d82ccf6f.webp", "images/portfolio/158e45592ac6.webp", "images/portfolio/a97ec06b4248.webp", "images/portfolio/551d2e1ec390.webp", "images/portfolio/0fd6cb017834.webp", "images/portfolio/4feb56868e94.webp", "images/portfolio/2c571219a845.webp", "images/portfolio/92e6b616fc33.webp", "images/portfolio/08cb063d3024.webp"]' onclick="goDetail(this,'BR-019','디퓨저 브랜딩','images/portfolio/1085567776e0.webp')">
         <div class="thumb" style="background:url('images/portfolio/1085567776e0.webp') center/cover"></div>
@@ -750,45 +771,6 @@
   </div>
 </section>
 
-<!-- FAQ + ORDER -->
-<section>
-  <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">FAQ</span>
-        <h2 class="sec">자주 묻는 질문</h2>
-      </div>
-      <p>견적, 작업 기간, 수정 횟수, 파일 전달 방식 등 궁금하신 내용을 정리했습니다.</p>
-    </div>
-    <div class="faq-list reveal">
-      <details class="faq-item" open>
-        <summary><span><span class="q-num">Q1.</span>홀리픽셀은 어떤 디자인을 진행하나요?</span><span class="chev">+</span></summary>
-        <div class="faq-a">교회 디자인(절기 포스터, 현수막, 주보, 로고 브랜딩)부터 상업 브랜드 디자인(로고, 패키지, 상세페이지), 디자인 템플릿까지 폭넓게 진행합니다.</div>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q2.</span>작업은 어떤 프로세스로 진행되나요?</span><span class="chev">+</span></summary>
-        <div class="faq-a">디자인 상담 &amp; 레퍼런스 전달 → 견적서 전달 → 선결제 후 디자인 작업 → 수정 작업 → 최종 작업 후 원본 전달, 총 5단계로 진행됩니다.</div>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q3.</span>수정은 몇 회까지 가능한가요?</span><span class="chev">+</span></summary>
-        <div class="faq-a">기본적으로 2회 무료 수정이 포함되며, 서비스 항목에 따라 포함된 수정 횟수가 달라질 수 있으니 참고 부탁드립니다.</div>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q4.</span>작업 기간은 얼마나 걸리나요?</span><span class="chev">+</span></summary>
-        <div class="faq-a">평균 3~10일 내외로 진행되며, 작업 범위와 일정에 따라 달라질 수 있습니다.</div>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q5.</span>파일은 어떤 형식으로 전달되나요?</span><span class="chev">+</span></summary>
-        <div class="faq-a">작업 완료 후 원본 파일을 전달드리며, 사용 범위와 전달 형식은 작업 항목에 따라 안내드립니다.</div>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q6.</span>견적은 어떻게 확인할 수 있나요?</span><span class="chev">+</span></summary>
-        <div class="faq-a">카카오톡 채널로 편하게 문의주시면 전문 디자이너가 빠르게 견적을 안내해드립니다.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
 <!-- PROCESS -->
 <section>
   <div class="wrap">
@@ -843,6 +825,45 @@
   </div>
 </section>
 
+<!-- FAQ + ORDER -->
+<section>
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h2 class="sec">자주 묻는 질문</h2>
+      </div>
+      <p>견적, 작업 기간, 수정 횟수, 파일 전달 방식 등 궁금하신 내용을 정리했습니다.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary><span><span class="q-num">Q1.</span>홀리픽셀은 어떤 디자인을 진행하나요?</span><span class="chev">+</span></summary>
+        <div class="faq-a">교회 디자인(절기 포스터, 현수막, 주보, 로고 브랜딩)부터 상업 브랜드 디자인(로고, 패키지, 상세페이지), 디자인 템플릿까지 폭넓게 진행합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q2.</span>작업은 어떤 프로세스로 진행되나요?</span><span class="chev">+</span></summary>
+        <div class="faq-a">디자인 상담 &amp; 레퍼런스 전달 → 견적서 전달 → 선결제 후 디자인 작업 → 수정 작업 → 최종 작업 후 원본 전달, 총 5단계로 진행됩니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q3.</span>수정은 몇 회까지 가능한가요?</span><span class="chev">+</span></summary>
+        <div class="faq-a">기본적으로 2회 무료 수정이 포함되며, 서비스 항목에 따라 포함된 수정 횟수가 달라질 수 있으니 참고 부탁드립니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q4.</span>작업 기간은 얼마나 걸리나요?</span><span class="chev">+</span></summary>
+        <div class="faq-a">평균 3~10일 내외로 진행되며, 작업 범위와 일정에 따라 달라질 수 있습니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q5.</span>파일은 어떤 형식으로 전달되나요?</span><span class="chev">+</span></summary>
+        <div class="faq-a">작업 완료 후 원본 파일을 전달드리며, 사용 범위와 전달 형식은 작업 항목에 따라 안내드립니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q6.</span>견적은 어떻게 확인할 수 있나요?</span><span class="chev">+</span></summary>
+        <div class="faq-a">카카오톡 채널로 편하게 문의주시면 전문 디자이너가 빠르게 견적을 안내해드립니다.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="cta">
   <div class="wrap">
@@ -885,10 +906,11 @@
         <p class="brand-name">홀리픽셀 디자인 스튜디오 — 픽셀처럼 정교하게, 빛처럼 선명하게. 교회·브랜드·상업 디자인 원스톱 스튜디오.</p>
       </div>
       <div class="foot-menu">
-        <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
+        <a href="holypixel-about.html">소개</a>
+        <a href="holypixel-pricing.html">가격 안내</a>
         <a href="holypixel-commerce.html">상업 디자인</a>
         <a href="holypixel-church.html">교회 디자인</a>
-        <a href="holypixel-pricing.html">가격 안내</a>
+        <a href="https://mkt.shopping.naver.com/link/69ba0a213be26364be58feb5" target="_blank" rel="noopener">디자인 템플릿</a>
       </div>
     </div>
     <div class="foot-bot">
