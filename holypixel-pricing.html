@@ -473,175 +473,51 @@
   .faq-item b{display:block;font-size:16.5px;font-weight:900;margin-bottom:8px;letter-spacing:-.01em}
   .faq-item p{font-size:14px;color:var(--g-600);line-height:1.7}
 
-  /* ===== ESTIMATE CALCULATOR ===== */
-  section.section.est-sec{background:var(--paper)}
-  .est-notice{display:flex;gap:14px;align-items:flex-start;border:2px dashed var(--ink);background:var(--o-50);padding:16px 20px;margin-bottom:28px;font-size:13.5px;color:var(--g-700);line-height:1.65}
-  .est-notice b{display:block;font-size:14px;font-weight:900;color:var(--ink);margin-bottom:2px}
-  .est-notice .px{flex:none;width:12px;height:12px;background:var(--o-500);margin-top:5px;box-shadow:3px 3px 0 var(--ink)}
-  .est-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start}
-  @media(max-width:980px){.est-layout{grid-template-columns:1fr}}
+  /* ===== PRICE MENU (2026.10 개편) ===== */
+  .jump{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+  .jump a{font-weight:700;font-size:14px;padding:11px 20px;border:2px solid var(--ink);background:var(--white);border-radius:999px;transition:.15s}
+  .jump a:hover{background:var(--ink);color:#fff}
+  .jump a span{font-family:var(--mono);font-size:11px;color:var(--o-500);margin-right:6px}
+  #logo,#brand,#set{scroll-margin-top:84px}
 
-  .est-tabs{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--ink);border-bottom:none;background:var(--ink);gap:2px}
-  .est-tab{font-family:var(--sans);background:var(--white);border:none;padding:16px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--ink);position:relative;transition:background .15s}
-  .est-tab:hover{background:var(--o-50)}
-  .est-tab .en{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--g-500)}
-  .est-tab .ko{font-size:15px;font-weight:900}
-  .est-tab[aria-selected=true]{background:var(--o-500)}
-  .est-tab[aria-selected=true] .en{color:var(--ink)}
-  .est-tab .cnt{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:10px;font-weight:700;background:var(--ink);color:#fff;min-width:18px;height:18px;line-height:18px;padding:0 4px;text-align:center}
-  .est-tab:focus-visible{outline:3px solid var(--ink);outline-offset:-5px}
-  @media(max-width:560px){.est-tab{padding:12px 4px}.est-tab .ko{font-size:13px}.est-tab .en{font-size:8.5px;letter-spacing:.04em}}
+  .pc-grid{display:grid;gap:28px;align-items:stretch}
+  .pc-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  .pc-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:980px){.pc-grid.cols-3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:680px){.pc-grid.cols-2,.pc-grid.cols-3{grid-template-columns:1fr}}
 
-  .est-panel{border:2px solid var(--ink);background:var(--white);padding:34px}
-  @media(max-width:560px){.est-panel{padding:22px 16px}}
-  .est-ph{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px;padding-bottom:22px;border-bottom:1px dashed var(--g-300)}
-  .est-ph .num{font-family:var(--mono);font-size:12px;font-weight:700;background:var(--ink);color:#fff;padding:4px 9px;flex:none}
-  .est-ph h3{font-size:22px;font-weight:900;letter-spacing:-.02em;line-height:1.2}
-  .est-ph h3 small{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--g-400);letter-spacing:.08em;margin-left:8px}
-  .est-ph p{font-size:13.5px;color:var(--g-500);margin-top:4px}
+  .pc{position:relative;display:flex;flex-direction:column;background:var(--white);border:2px solid var(--ink);transition:transform .15s,box-shadow .15s}
+  .pc:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--ink)}
+  .pc-thumb{position:relative;aspect-ratio:16/10;border-bottom:2px solid var(--ink);overflow:hidden}
+  .pc-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+  .pc-thumb .px-tag{position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.1em;background:var(--white);color:var(--ink);border:2px solid var(--ink);padding:3px 8px}
+  .pc-grid.cols-3 .pc-thumb{aspect-ratio:4/3}
+  .pc-body{display:flex;flex-direction:column;flex:1;padding:26px 28px 24px}
+  .pc-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding-bottom:16px;border-bottom:1px solid var(--g-300)}
+  .pc-title h3{font-size:26px;font-weight:900;letter-spacing:-.02em;line-height:1.15}
+  .pc-title .bar{color:var(--g-400);font-weight:400}
+  .pc-title .ko{font-size:15px;font-weight:800;color:var(--g-700)}
+  .pc-desc{font-size:14px;color:var(--g-600);line-height:1.75;margin-top:16px}
+  .pc-list{list-style:none;padding:18px 0 22px;margin:0;display:flex;flex-direction:column;gap:9px;flex:1}
+  .pc-desc+.pc-list{margin-top:18px;border-top:1px dashed var(--g-300)}
+  .pc-list li{display:flex;gap:10px;font-size:14.5px;color:var(--g-700);line-height:1.55}
+  .pc-list li::before{content:"";flex:none;width:7px;height:7px;background:var(--o-500);margin-top:8px}
+  .pc-price{display:flex;justify-content:flex-end;align-items:baseline;gap:6px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--g-300)}
+  .pc-price b{font-size:28px;font-weight:900;letter-spacing:-.02em}
+  .pc-price span{font-size:13px;color:var(--g-500)}
 
-  .est-feats{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}
-  .est-feats li{display:flex;gap:9px;font-size:13.5px;color:var(--g-700);line-height:1.55}
-  .est-feats li::before{content:"";flex:none;width:7px;height:7px;background:var(--o-500);margin-top:7px}
+  .pc.reco{box-shadow:7px 7px 0 var(--o-500)}
+  .pc.reco:hover{box-shadow:10px 10px 0 var(--o-500)}
+  .pc.reco .pc-price b{color:var(--o-500)}
+  .pc-ribbon{position:absolute;top:-14px;right:20px;z-index:2;background:var(--o-500);color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;padding:5px 11px;border:2px solid var(--ink)}
 
-  .est-plans{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-  @media(max-width:640px){.est-plans{grid-template-columns:1fr}}
-  .est-plan{border:2px solid var(--ink);padding:24px;display:flex;flex-direction:column;gap:10px;cursor:pointer;transition:transform .12s,box-shadow .12s,background .15s;background:var(--white)}
-  .est-plan:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
-  .est-plan.on{background:var(--o-50);box-shadow:6px 6px 0 var(--ink);transform:translate(-3px,-3px)}
-  .est-plan-top{display:flex;justify-content:space-between;align-items:center}
-  .est-tier{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;border:2px solid var(--ink);padding:3px 8px}
-  .est-tier.pro{background:var(--ink);color:#fff}
-  .est-plan input,.est-card input[type=checkbox],.est-sup input{accent-color:var(--o-500);width:20px;height:20px;cursor:pointer;margin:0}
-  .est-plan .purpose{font-size:13px;color:var(--g-500)}
-  .est-plan .price{font-size:26px;font-weight:900;letter-spacing:-.02em}
-  .est-plan .price small{display:block;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--g-400);letter-spacing:.04em}
-  .est-plan .pick{margin-top:auto;padding-top:12px;border-top:1px dashed var(--g-300);font-size:13px;font-weight:800;text-align:center}
-  .est-plan.on .pick{color:var(--o-700)}
-  .est-deselect{margin-top:14px;text-align:right}
-  .est-deselect button{font-family:var(--sans);font-size:13px;font-weight:700;background:none;border:none;border-bottom:2px solid var(--ink);padding:2px 0;cursor:pointer}
-  .est-deselect button:disabled{opacity:.3;cursor:default}
-
-  .est-compare{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);margin-bottom:22px}
-  .est-compare>div{padding:18px 20px}
-  .est-compare>div+div{border-left:2px solid var(--ink);background:var(--g-100)}
-  .est-compare .est-tier{display:inline-block;margin-bottom:12px}
-  @media(max-width:560px){.est-compare{grid-template-columns:1fr}.est-compare>div+div{border-left:none;border-top:2px solid var(--ink)}}
-
-  .est-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-  .est-grid.detail{grid-template-columns:1fr}
-  @media(max-width:700px){.est-grid{grid-template-columns:1fr}}
-  .est-card{border:2px solid var(--ink);padding:22px;display:flex;flex-direction:column;gap:12px;background:var(--white);transition:box-shadow .12s,transform .12s,background .15s}
-  .est-card.on{background:var(--o-50);box-shadow:5px 5px 0 var(--ink);transform:translate(-2px,-2px)}
-  .est-card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
-  .est-card-top label{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:900;cursor:pointer}
-  .est-range{font-weight:900;font-size:15px;color:var(--o-600);white-space:nowrap}
-  .est-desc{font-size:13.5px;color:var(--g-500)}
-  .est-opts{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch}
-  .est-seg{display:inline-grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);flex:1;min-width:190px}
-  .est-seg label{display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;padding:8px 6px;cursor:pointer;min-height:40px;position:relative}
-  .est-seg label+label{border-left:2px solid var(--ink)}
-  .est-seg label.on{background:var(--ink);color:#fff}
-  .est-seg input{position:absolute;opacity:0;pointer-events:none}
-  .est-seg label:has(input:focus-visible){outline:3px solid var(--o-500);outline-offset:2px}
-  .est-qty{font-family:var(--sans);font-size:13px;font-weight:700;border:2px solid var(--ink);background:var(--white);padding:0 10px;min-height:44px;cursor:pointer;color:var(--ink)}
-  .est-unit{font-family:var(--mono);font-size:11px;color:var(--g-400);letter-spacing:.02em}
-  .est-excl{font-size:12.5px;color:var(--g-600);padding-top:12px;border-top:1px dashed var(--g-300);display:flex;gap:8px;align-items:baseline}
-  .est-excl span{flex:none;font-family:var(--mono);font-size:10px;font-weight:700;border:1.5px solid var(--g-400);color:var(--g-500);padding:1px 6px}
-
-  .est-note{display:flex;gap:12px;margin-top:20px;padding:16px 18px;background:var(--g-100);font-size:13px;color:var(--g-700);line-height:1.65}
-  .est-note::before{content:"";flex:none;width:8px;height:8px;background:var(--ink);margin-top:6px}
-  .est-note b{color:var(--ink);font-weight:800}
-
-  .est-sup{margin-top:20px;border:2px solid var(--ink);padding:20px 22px;background:var(--white)}
-  .est-sup.on{background:var(--o-50);box-shadow:5px 5px 0 var(--ink)}
-  .est-sup label{display:flex;gap:12px;align-items:center;cursor:pointer}
-  .est-sup label strong{display:block;font-size:16px;font-weight:900}
-  .est-sup label small{font-size:12.5px;color:var(--g-500)}
-  .est-sup label b{margin-left:auto;font-weight:900;color:var(--o-600);white-space:nowrap}
-  .est-sup p{font-size:13px;color:var(--g-600);margin-top:8px}
-  .est-sup .hint{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--o-700)}
-  .est-sup input:disabled{cursor:not-allowed}
-  .est-sup input:disabled+span{opacity:.5}
-
-  .est-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:24px;padding-top:16px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:11px;font-weight:700;color:var(--g-500)}
-
-  /* summary */
-  .est-sum{position:sticky;top:96px;background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--o-500)}
-  @media(max-width:980px){.est-sum{position:static;box-shadow:6px 6px 0 var(--o-500)}}
-  .est-sum-head{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid rgba(255,255,255,.18)}
-  .est-sum-head .k{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--o-400)}
-  .est-sum-head h3{font-size:18px;font-weight:900;margin-top:2px}
-  .est-sum-head h3 span{display:inline-block;background:var(--o-500);color:var(--ink);font-family:var(--mono);font-size:12px;padding:0 7px;margin-left:6px;vertical-align:2px}
-  .est-reset{font-family:var(--sans);font-size:12.5px;font-weight:700;color:#fff;background:none;border:1.5px solid rgba(255,255,255,.4);padding:6px 10px;cursor:pointer}
-  .est-reset:hover:not(:disabled){background:#fff;color:var(--ink)}
-  .est-reset:disabled{opacity:.3;cursor:default}
-  .est-lines{padding:6px 22px;max-height:46vh;overflow:auto}
-  @media(max-width:980px){.est-lines{max-height:none}}
-  .est-group{padding:14px 0;border-bottom:1px dashed rgba(255,255,255,.2)}
-  .est-group:last-child{border-bottom:none}
-  .est-group h4{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--g-400);margin-bottom:8px}
-  .est-line{padding:6px 0}
-  .est-line-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-  .est-line-top b{font-size:14.5px;font-weight:800}
-  .est-line-top b small{display:block;font-size:12px;font-weight:600;color:var(--g-400)}
-  .est-x{background:none;border:none;color:var(--g-400);font-size:18px;line-height:1;cursor:pointer;padding:2px 4px;min-width:32px;min-height:32px}
-  .est-x:hover{color:var(--o-400)}
-  .est-line .r{font-size:14px;font-weight:800;color:var(--o-400);margin-top:2px}
-  .est-line details{margin-top:6px}
-  .est-line summary{font-size:12px;color:var(--g-300);cursor:pointer;list-style:none}
-  .est-line summary::-webkit-details-marker{display:none}
-  .est-line summary::after{content:" +";font-family:var(--mono)}
-  .est-line details[open] summary::after{content:" −"}
-  .est-line details .u{display:block;font-family:var(--mono);font-size:10.5px;color:var(--g-400);margin:6px 0}
-  .est-line details ul{padding-left:16px;font-size:12px;color:var(--g-300);line-height:1.6}
-  .est-empty{padding:30px 0;text-align:center}
-  .est-empty .px3{display:inline-grid;grid-template-columns:repeat(3,8px);gap:3px;margin-bottom:14px}
-  .est-empty .px3 i{width:8px;height:8px;background:rgba(255,255,255,.18)}
-  .est-empty .px3 i:nth-child(odd){background:var(--o-500)}
-  .est-empty b{display:block;font-size:15px;font-weight:800;margin-bottom:6px}
-  .est-empty span{font-size:12.5px;color:var(--g-400);line-height:1.6}
-  .est-totals{padding:20px 22px;border-top:2px solid var(--o-500);background:rgba(255,255,255,.04)}
-  .est-totals .lbl{font-size:13px;font-weight:700;color:var(--g-300)}
-  .est-totals .lbl span{font-family:var(--mono);font-size:10.5px;color:var(--g-400);margin-left:6px}
-  .est-totals .big{font-size:30px;font-weight:900;letter-spacing:-.02em;color:var(--o-500);line-height:1.2;margin:4px 0 12px}
-  .est-tax{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--g-300);padding:4px 0}
-  .est-tax.inc{border-top:1px dashed rgba(255,255,255,.2);margin-top:4px;padding-top:8px;color:#fff;font-weight:700}
-  .est-warn{font-size:11.5px;color:var(--o-300);margin-top:10px;line-height:1.55}
-  .est-sum-foot{padding:16px 22px 22px;font-size:12px;color:var(--g-400);line-height:1.6}
-  .est-sum-foot .btn{width:100%;justify-content:center;margin-top:14px;background:var(--o-500);color:var(--ink);border-color:var(--o-500);font-size:15px;padding:14px 18px}
-  .est-sum-foot .btn:hover{background:#fff;border-color:#fff}
-
-  .est-mbar{display:none}
-  @media(max-width:980px){
-    .est-mbar{display:flex;position:sticky;bottom:12px;z-index:40;margin-top:18px;align-items:center;justify-content:space-between;gap:12px;background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--o-500);padding:12px 16px}
-    .est-mbar span{display:block;font-size:11px;color:var(--g-400)}
-    .est-mbar strong{font-size:18px;font-weight:900;color:var(--o-500)}
-    .est-mbar a{font-size:13px;font-weight:800;background:var(--o-500);color:var(--ink);padding:9px 14px;white-space:nowrap}
-    .est-mbar a em{font-style:normal;font-family:var(--mono);background:var(--ink);color:#fff;padding:0 5px;margin-left:6px}
-  }
-
-  .est-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);border:2px solid var(--ink);margin-top:44px}
-  @media(max-width:760px){.est-guide{grid-template-columns:1fr}}
-  .est-guide article{background:var(--white);padding:24px 22px}
-  .est-guide .n{font-family:var(--mono);font-size:12px;font-weight:700;background:var(--ink);color:#fff;padding:3px 8px;display:inline-block;margin-bottom:12px}
-  .est-guide h4{font-size:16px;font-weight:900;margin-bottom:8px}
-  .est-guide p{font-size:13px;color:var(--g-600);line-height:1.65}
-  .est-rev{font-size:13px;color:var(--g-600);margin-top:16px}
-  .est-rev::before{content:"* ";color:var(--o-500);font-weight:800}
-  @media(prefers-reduced-motion:reduce){.est-plan,.est-card,.est-tab{transition:none}}
-  #estimate,#estSum{scroll-margin-top:90px}
-  .est-card.est-wide{grid-column:1/-1}
-  @media(max-width:560px){
-    .est-tab .en{display:none}
-    .est-tab{padding:14px 4px}
-    .est-tab .cnt{top:4px;right:4px}
-    .est-seg{min-width:0}
-    .est-opts{flex-wrap:nowrap}
-    .est-sup label{flex-wrap:wrap}
-    .est-sup label b{margin-left:32px;width:100%}
-    .est-totals .big{font-size:26px}
-  }
+  .pc-note{margin-top:28px;display:flex;gap:14px;align-items:flex-start;border:2px dashed var(--ink);background:var(--o-50);padding:18px 22px;font-size:14px;color:var(--g-700);line-height:1.7}
+  .pc-note::before{content:"";flex:none;width:12px;height:12px;background:var(--o-500);margin-top:6px;box-shadow:3px 3px 0 var(--ink)}
+  .pc-note b{color:var(--ink);font-weight:900}
+  .pc-note a{font-weight:800;border-bottom:2px solid var(--ink)}
+  section.section.orange-bg .eyebrow,section.section.orange-bg h2.sec{color:var(--ink)}
+  section.section.orange-bg .head-row p{color:var(--ink)}
+  @media(max-width:560px){.pc-body{padding:22px 20px 20px}.pc-title h3{font-size:22px}.pc-price b{font-size:24px}}
 </style>
 
 </head>
@@ -696,212 +572,150 @@
 <header class="header-sm">
   <div class="wrap">
     <span class="eyebrow">PRICING</span>
-    <h1 class="hero" style="max-width:760px">디자인 의뢰 전, 예산부터<br>편하게 확인하세요.</h1>
-    <p class="hero-sub">홀리픽셀은 시작가와 패키지 기준가를 먼저 안내합니다.<br>정확한 견적은 작업 범위를 함께 확인한 뒤, 상담을 통해 안내드려요.</p>
+    <h1 class="hero" style="max-width:760px">브랜드 단계에 맞춰<br>필요한 디자인을 고르세요.</h1>
+    <p class="hero-sub">로고부터 브랜드 디자인, 출시 준비 세트까지.<br>홀리픽셀의 모든 가격은 고정가로 안내드려요.</p>
     <div class="hero-btns">
       <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">내 작업 견적 문의하기 →</a>
-      <a href="#estimate" class="btn btn-secondary">예상 견적 계산해보기 ↓</a>
     </div>
   </div>
 </header>
 
 
 
-<!-- 패키지 가격 -->
-<section class="section orange-bg">
+<!-- 01 로고 디자인 -->
+<section class="section" id="logo">
   <div class="wrap">
     <div class="head-row reveal">
       <div>
-        <span class="eyebrow">PACKAGES</span>
-        <h2 class="sec">브랜드 준비 단계에 따른 맞춤 패키지</h2>
+        <span class="eyebrow">01 · LOGO</span>
+        <h2 class="sec">로고 디자인</h2>
       </div>
+      <p>로고만 빠르게 필요할 때 선택하세요. 형태에 따라 두 가지로 진행합니다.</p>
     </div>
-
-    <div class="pkg3-grid">
-      <div class="pkg3-card reveal">
-        <div class="pkg3-cat">STARTER · 브랜드 첫 시작</div>
-        <div class="pkg3-tagline">로고 + 인쇄물 2종 디자인</div>
-        <div class="pkg3-price">65<span>만원~</span> <span class="pkg3-alt">따로 맡기면 <u>77만원</u> <b class="save-pct">16% 할인</b></span></div>
-        <ul class="pkg3-list">
-          <li>로고 (시안 2안)</li>
-          <li>로고 매뉴얼북 · 적용 목업</li>
-          <li>인쇄물 2종 (간판 디자인, 명함 등)</li>
-        </ul>
-        <div class="pkg3-terms">선금 50% · 수정 3회 · 2~3주</div>
-      </div>
-
-      <div class="pkg3-card dark reveal">
-        <div class="pkg3-cat">GROWTH · 가장 많이 찾는 구성</div>
-        <div class="pkg3-tagline">로고 + 패키지 2종 디자인</div>
-        <div class="pkg3-price">115<span>만원~</span> <span class="pkg3-alt">따로 맡기면 <u>132만원</u> <b class="save-pct">13% 할인</b></span></div>
-        <ul class="pkg3-list">
-          <li>로고 (시안 2안) · 매뉴얼북</li>
-          <li>+ 적용 목업</li>
-          <li>+ 명함 200매 무료</li>
-          <li>+ 패키지 2종 (용기, 단상자)</li>
-        </ul>
-        <div class="pkg3-terms">선금 50% · 수정 3회 · 3~4주</div>
-      </div>
-
-      <div class="pkg3-card reveal">
-        <div class="pkg3-cat">COMPLETE · 브랜드 완성</div>
-        <div class="pkg3-tagline">로고 + 패키지 3종 + 상세페이지 1종</div>
-        <div class="pkg3-price">190<span>만원~</span></div>
-        <div class="pkg3-alt-below">따로 맡기면 <u>230만원</u> <b class="save-pct">17% 할인</b></div>
-        <ul class="pkg3-list">
-          <li>로고 3종 · 로고 매뉴얼북</li>
-          <li>+ 브랜드 가이드북</li>
-          <li>+ 명함 200매 무료</li>
-          <li>+ 패키지 2종 · 상세페이지 1종</li>
-          <li>+ 제품 촬영 15컷 · 썸네일 2종</li>
-        </ul>
-        <div class="pkg3-terms">선금 50% · 수정 3회 · 4~6주</div>
-      </div>
-    </div>
-
-    <p class="pricing-note" style="text-align:left;margin:20px 0 0;color:#fff">패키지 상품에 패키지 디자인 추가 시 개별 단가의 80%</p>
-  </div>
-</section>
-
-<!-- 정기구독 디자인 -->
-<section class="section tint">
-  <div class="wrap">
-    <div class="sub-intro reveal">
-      <span class="eyebrow">SUBSCRIPTION</span>
-      <h2 class="sec">스타트업 · 소규모 기업을 위한<br>디자인 구독 서비스</h2>
-
-      <p class="sub-q">수시로 발생하는 디자인 업무, 건당 외주 의뢰, 부담스러운 채용으로 해결하고 계신가요?</p>
-      <p class="sub-p">디자인 인력 채용은 높은 인건비와 비효율로 이어지고, 건별 외주는 비용 상승과 들쭉날쭉한 퀄리티를 만듭니다.<br>반복되는 복잡한 커뮤니케이션도 시간 낭비로 이어집니다.</p>
-
-      <p class="sub-q">홀리픽셀은 이 모든 고민을 해결합니다.</p>
-      <p class="sub-p">합리적인 디자인 구독 서비스를 통해 채용 없이 전담 디자이너를 바로 활용하세요.<br>예측 가능한 고정 비용으로 일관된 퀄리티의 디자인을 정기적으로 받아보실 수 있습니다.</p>
-
-      <p class="sub-strong">단순한 디자인 외주가 아닌, <b>가장 효율적인 디자인 파트너</b>로서 브랜드의 <b>지속적인 성장</b>을 지원합니다.</p>
-    </div>
-
-    <div class="sub-feature-grid reveal">
-      <div class="sub-feature-card">
-        <h3>비용 효율성</h3>
-        <p>디자이너 채용 시 발생하는 고정 비용을 절감합니다. 디자인 수요가 적은 달에는 구독 플랜을 유연하게 조정할 수 있어 비용 낭비가 없습니다.</p>
-      </div>
-      <div class="sub-feature-card">
-        <h3>유연하고 신속한 서비스</h3>
-        <p>필요할 때마다 디자인을 요청하고, 수정 사항을 빠르게 처리할 수 있습니다. 프로젝트 외주에서 발생하는 복잡한 커뮤니케이션과 지연을 줄여드립니다.</p>
-      </div>
-      <div class="sub-feature-card">
-        <h3>일관된 퀄리티와 전문성</h3>
-        <p>정해진 구독 비용으로 경험 많은 전문 디자이너를 활용하세요. 브랜드의 통일성을 잃지 않으면서 다양한 디자인을 효율적으로 제작할 수 있습니다.</p>
-      </div>
-    </div>
-
-    <div class="sub-price-bar reveal">
-      <span>3개월 단위 구독</span>
-      <b>월 55만원~</b>
-      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn btn-primary">구독 상담하기 →</a>
-      <a href="https://pf.kakao.com/_xjyfNn" target="_blank" rel="noopener" class="btn sub-trial-btn">1개월 무료 체험 · 50% 할인</a>
-    </div>
-    <p class="sub-scope-note reveal">제공 디자인 : 로고, 패키지, 상세페이지, 썸네일, 인쇄 디자인, 브랜드 디자인 등 — 자세한 항목은 상담 후 안내 가능합니다.</p>
-  </div>
-</section>
-
-<!-- 예상 견적 계산기 -->
-<section class="section est-sec" id="estimate">
-  <div class="wrap">
-    <div class="head-row reveal">
-      <div>
-        <span class="eyebrow">ESTIMATE</span>
-        <h2 class="sec">필요한 디자인만 골라<br>예상 견적 만들기</h2>
-      </div>
-      <p>서비스를 비교하고, 필요한 항목으로 예상 견적을 만들어보세요.</p>
-    </div>
-
-    <div class="est-notice reveal"><span class="px" aria-hidden="true"></span><p><b>검토용 구성 · 잠정 금액</b><span id="estRateNote"></span></p></div>
-
-    <div class="est-layout">
-      <div>
-        <div class="est-tabs" id="estTabs" role="tablist" aria-label="디자인 서비스"></div>
-        <div class="est-panel" id="estPanel" role="tabpanel" tabindex="0"></div>
-        <div class="est-mbar" aria-hidden="false">
-          <div><span>예상 합계 · 부가세 별도</span><strong id="estMPrice">0원</strong></div>
-          <a href="#estSum">구성 보기<em id="estMCount">0</em></a>
+    <div class="pc-grid cols-2">
+      <article class="pc reveal">
+        <div class="pc-body">
+          <div class="pc-title"><h3>Font Logo</h3><span class="bar">|</span><span class="ko">폰트형 로고</span></div>
+          <ul class="pc-list">
+            <li>폰트형 로고 1종</li>
+            <li>로고 원본, 컬러 안내 포함</li>
+            <li>수정 횟수 제한</li>
+          </ul>
+          <div class="pc-price"><b>330,000원</b><span>(부가세 별도)</span></div>
         </div>
-      </div>
-      <aside class="est-sum" id="estSum" aria-label="예상 견적 요약"></aside>
+      </article>
+      <article class="pc reveal">
+        <div class="pc-body">
+          <div class="pc-title"><h3>Logo</h3><span class="bar">|</span><span class="ko">로고</span></div>
+          <ul class="pc-list">
+            <li>캐릭터형, 심볼형, 워드마크형 등 형태 제한 없음</li>
+            <li>로고 원본, 컬러 안내 포함</li>
+            <li>수정 횟수 제한</li>
+          </ul>
+          <div class="pc-price"><b>770,000원</b><span>(부가세 별도)</span></div>
+        </div>
+      </article>
     </div>
-
-    <div class="est-guide reveal" aria-label="예상 견적 기준">
-      <article><span class="n">01</span><h4>선택한 범위로 합산</h4><p>선택한 유형의 단가에 디자인 종류 수를 곱합니다. 기획·촬영·감리는 선택할 때만 더해집니다.</p></article>
-      <article><span class="n">02</span><h4>제작 실비는 별도</h4><p>인쇄·용기·포장 제작비는 재질과 생산 수량이 정해진 뒤 별도로 확인합니다.</p></article>
-      <article><span class="n">03</span><h4>상담 후 최종 확정</h4><p>규격 확대, 추가 제품, 원고 분량, 특수 작업, 긴급 일정에 따라 금액이 달라질 수 있습니다.</p></article>
-    </div>
-    <p class="est-rev">수정 3회는 선택한 시안 안에서의 조정 기준입니다. 촬영 보정은 1회이며, 새 콘셉트·추가 시안·재촬영은 별도 범위입니다.</p>
-    <div id="estLive" class="sr-only" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></div>
+    <p class="pc-note reveal"><span><b>로고 디자인은 브랜드 기획 및 방향 정리가 포함되지 않은 디자인 작업입니다.</b><br>브랜드 방향부터 함께 잡고 싶다면 <a href="#brand">브랜드 디자인</a>을 확인해주세요.</span></p>
   </div>
 </section>
 
-<!-- 시안·수정·결제 기준 -->
-<section class="section tint">
+<!-- 02 브랜드 디자인 -->
+<section class="section tint" id="brand">
   <div class="wrap">
     <div class="head-row reveal">
       <div>
-        <span class="eyebrow">CRITERIA</span>
-        <h2 class="sec">작업별 시안과 수정 횟수 한눈에 보기</h2>
+        <span class="eyebrow">02 · BRANDING</span>
+        <h2 class="sec">브랜드 디자인</h2>
       </div>
+      <p>브랜드 방향 정리부터 가이드까지, 일관된 브랜드를 함께 만듭니다.</p>
     </div>
-
-    <div class="price-table-wrap reveal">
-      <table class="price-table">
-        <thead>
-          <tr>
-            <th>작업</th>
-            <th>시안</th>
-            <th>수정</th>
-            <th>비고</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tbl-name">로고</td>
-            <td>2안</td>
-            <td>3회</td>
-            <td class="tbl-sub">—</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">패키지 2종 세트</td>
-            <td>2안</td>
-            <td>3회</td>
-            <td class="tbl-sub">인쇄 전 교정 1회 · 인쇄 데이터 포함</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">상세페이지</td>
-            <td>1안</td>
-            <td>3회</td>
-            <td class="tbl-sub">길이 제한 없음 · 납품 후 7일 오탈자 무료</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">인쇄물</td>
-            <td>2안</td>
-            <td>3회</td>
-            <td class="tbl-sub">배리에이션은 1회</td>
-          </tr>
-          <tr>
-            <td class="tbl-name">제품 촬영 · 썸네일</td>
-            <td>—</td>
-            <td>보정 수정 1회</td>
-            <td class="tbl-sub">재촬영은 별도 견적</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="etc-bar reveal" style="background:var(--white);color:var(--ink);border:2px solid var(--ink)">
-      <div><b>결제</b>선금 50% · 잔금 50%</div>
-      <div><b>추가 수정</b>회당 3만원</div>
-      <div><b>시안 재작업</b>초기 시안 비용의 20~30%</div>
+    <div class="pc-grid cols-3">
+      <article class="pc reveal">
+        <div class="pc-body">
+          <div class="pc-title"><h3>Basic</h3><span class="bar">|</span><span class="ko">베이직 브랜딩</span></div>
+          <p class="pc-desc">브랜드의 방향을 정리하고,<br>기본적인 이미지를 구축하고 싶은 분들께 추천드립니다.<br>시작 단계의 브랜드가 일관된 흐름을 만들 수 있도록 작업합니다.</p>
+          <ul class="pc-list">
+            <li>로고 1종</li>
+            <li>브랜드 스터디 및 디자인 방향 정리 (PDF 제공)</li>
+            <li>로고 부분 수정 횟수 제한 없음 (전면 수정 불가)</li>
+            <li>디자인 가이드 (컬러 / 규칙 / 서체 정리)</li>
+            <li>응용디자인 가이드 3종 (항목 임의 선정, 수정 불포함)</li>
+          </ul>
+          <div class="pc-price"><b>900,000원</b><span>(부가세 별도)</span></div>
+        </div>
+      </article>
+      <article class="pc reco reveal">
+        <span class="pc-ribbon">가장 많이 찾는 구성</span>
+        <div class="pc-body">
+          <div class="pc-title"><h3>Premium</h3><span class="bar">|</span><span class="ko">프리미엄 브랜딩</span></div>
+          <p class="pc-desc">브랜드의 시각적 완성도를 높이고,<br>확장 가능한 이미지를 구축하고 싶은 분들께 추천드립니다.<br>키비주얼을 포함하여 브랜드의 전반적인 인상을 함께 만듭니다.</p>
+          <ul class="pc-list">
+            <li>로고 1종</li>
+            <li>브랜드 스터디 및 디자인 방향 정리 (PDF 제공)</li>
+            <li>로고 부분 수정 횟수 제한 없음 (전면 수정 불가)</li>
+            <li>디자인 가이드 (컬러 / 규칙 / 서체 정리)</li>
+            <li>응용디자인 가이드 3종 (항목 임의 선정, 수정 불포함)</li>
+            <li>브랜드 키비주얼 포함 (수정 포함 / 전면 수정 불가)</li>
+          </ul>
+          <div class="pc-price"><b>1,250,000원</b><span>(부가세 별도)</span></div>
+        </div>
+      </article>
+      <article class="pc reveal">
+        <div class="pc-body">
+          <div class="pc-title"><h3>Custom</h3><span class="bar">|</span><span class="ko">커스텀 브랜딩</span></div>
+          <p class="pc-desc">브랜드 방향 설정부터 패키지, 웹, SNS까지<br>여러 디자인 요소를 한 번에 정리해야 할 때 진행합니다.<br>프로젝트 범위를 상담으로 확인한 뒤 맞춤 구성으로 작업합니다.</p>
+          <ul class="pc-list">
+            <li>제품, 패키지, 웹, SNS 등 확장 디자인 포함 가능</li>
+            <li>공간, 설치, 촬영 등 추가 요소 상담 진행</li>
+            <li>정부지원사업 및 외주 협업 프로젝트 가능</li>
+            <li>대면 미팅 또는 심층 상담 진행</li>
+          </ul>
+          <div class="pc-price"><b>1,600,000원</b><span>(부가세 별도)</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- 03 브랜드 세트 -->
+<section class="section orange-bg" id="set">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div>
+        <span class="eyebrow">03 · BRAND SET</span>
+        <h2 class="sec">제품 출시를 위한 브랜드 세트</h2>
+      </div>
+      <p>로고와 패키지부터, 상세페이지와 촬영까지 판매 준비를 한 번에 진행합니다.</p>
+    </div>
+    <div class="pc-grid cols-2">
+      <article class="pc reveal">
+                <div class="pc-body">
+          <div class="pc-title"><h3>Brand Start</h3><span class="bar">|</span><span class="ko">브랜드 초기 디자인</span></div>
+          <p class="pc-desc">제품 출시를 앞두고 로고와 패키지를<br>함께 준비하는 시작 단계 구성입니다.</p>
+          <ul class="pc-list">
+            <li>로고</li>
+            <li>패키지</li>
+          </ul>
+          <div class="pc-price"><b>650,000원</b><span>(부가세 별도)</span></div>
+        </div>
+      </article>
+      <article class="pc reveal">
+                <div class="pc-body">
+          <div class="pc-title"><h3>Brand Complete</h3><span class="bar">|</span><span class="ko">브랜드 완성 디자인</span></div>
+          <p class="pc-desc">로고, 패키지, 상세페이지, 촬영까지<br>판매에 필요한 디자인을 한 번에 준비하는 구성입니다.</p>
+          <ul class="pc-list">
+            <li>로고</li>
+            <li>패키지</li>
+            <li>상세페이지</li>
+            <li>제품 촬영</li>
+          </ul>
+          <div class="pc-price"><b>1,150,000원</b><span>(부가세 별도)</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <!-- 진행 과정 -->
 <section class="section">
@@ -1086,151 +900,6 @@
       m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.classList.remove('active');});});
     }
   })();
-</script>
-<script>
-(function(){
-  /* ===== 예상 견적 계산기 ===== */
-  var RATE_NOTE='기존 제안안을 바탕으로 만든 검토용 구성과 잠정 금액입니다. Holy Pixel 확정 가격표가 아니며, 실제 범위와 견적은 상담 후 확정됩니다.';
-  var LOGO={plans:[
-    {id:'basic',label:'기본형',price:330000,purpose:'핵심 로고가 필요한 브랜드',scope:['로고 + 명함 + 로고 매뉴얼북','시안 2안 · 수정 3회']},
-    {id:'premium',label:'프리미엄형',price:770000,purpose:'일관된 브랜드 표현이 필요한 브랜드',scope:['로고 + 명함 + 로고 매뉴얼북','브랜드 가이드북 + 컬러 시스템 + 서체 시스템','응용 디자인 5종','로고 시안 4안 · 수정 5회']}
-  ]};
-  var SERVICES=[
-    {id:'label',category:'package',name:'라벨·스티커·용기',description:'제품에 붙이는 라벨·스티커, 용기 표면 그래픽',unit:'제품 1종',multiple:5,options:[{id:'one',label:'1면',price:150000},{id:'both',label:'앞뒷면',price:250000}],scope:['시안 2안 · 수정 3회 · 교정 1회','인쇄 데이터 포함'],excluded:'인쇄·부착·용기 구매·금형은 별도'},
-    {id:'box',category:'package',name:'단상자',description:'제품 한 개를 담는 접이식 상자 디자인',unit:'제품 1종 · 전개도 1규격',multiple:5,options:[{id:'four',label:'4면',price:350000},{id:'six',label:'6면',price:450000}],scope:['시안 2안 · 수정 3회 · 교정 1회','인쇄 데이터 포함'],excluded:'상자 제작·구조 설계·칼선 개발·샘플 제작은 별도'},
-    {id:'combo',category:'package',name:'복합 패키지',description:'라벨 + 용기 + 파우치 + 단상자',unit:'제품 1종 · 4종 구성',multiple:5,options:[{id:'set',label:'4종 세트',price:770000}],scope:['시안 2안 · 수정 3회 · 교정 1회','인쇄 데이터 포함'],excluded:'패키지 제작·칼선 개발·동판비·샘플 제작은 별도'},
-    {id:'detail',category:'detail',name:'상세페이지',description:'필요한 범위에 맞춰 구성을 선택하세요',unit:'제품 1종',options:[{id:'design',label:'디자인만',price:350000,fixed:true},{id:'plan',label:'기획+디자인',price:600000,fixed:true},{id:'full',label:'촬영+기획+디자인',price:990000}],scope:['길이 제한 없음 · 시안 1안 · 수정 3회','납품 후 7일 오탈자 무료'],excluded:'쇼핑몰 업로드는 미포함'},
-    {id:'photo',category:'detail',name:'제품 촬영',description:'실물 제품을 촬영하고 최종 컷을 보정',unit:'촬영 4시간',options:[{id:'h4',label:'4시간',price:700000,fixed:true}],scope:['보정 수정 1회'],excluded:'재촬영은 별도 견적'},
-    {id:'thumb',category:'detail',name:'썸네일',description:'판매 채널용 대표 이미지',unit:'장당',multiple:10,qtyUnit:'장',options:[{id:'one',label:'장당',price:30000,fixed:true}],scope:['보정 수정 1회'],excluded:'재촬영은 별도 견적'},
-    {id:'poster',category:'print',name:'절기 포스터',description:'부활절 · 추수감사절 · 성탄절 등',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:150000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'종이·인쇄·후가공·배송은 별도'},
-    {id:'banner',category:'print',name:'현수막 디자인',description:'사이즈 · 인쇄 사양에 따라 변동',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:150000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'원단·출력·마감·배송·설치는 별도'},
-    {id:'leaflet',category:'print',name:'리플렛 디자인',description:'정기 발행물 기본 구성',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:200000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·접지·배송은 별도'},
-    {id:'postcard',category:'print',name:'엽서 디자인',description:'행사 안내 · 초대 · 감사 엽서',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:80000,fixed:true}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·배송은 별도'},
-    {id:'envelope',category:'print',name:'헌금봉투 디자인',description:'교회 헌금봉투 디자인',unit:'1종',multiple:5,options:[{id:'b',label:'기준가',price:100000,fixed:true}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·배송은 별도'},
-    {id:'church',category:'print',name:'교회 브랜딩, 행사 디자인',description:'로고 브랜딩부터 포스터·현수막, 웹사이트·주보·굿즈까지',unit:'1건',options:[{id:'b',label:'기준가',price:330000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·제작비는 별도'},
-    {id:'eventset',category:'print',name:'대형 행사 세트',description:'포스터 + 현수막 + 택 2종 (배너 · PPT · SNS 피드 · 엽서 등)',unit:'행사 1건',options:[{id:'b',label:'세트',price:550000}],scope:['시안 2종 · 무료 수정 2회'],excluded:'인쇄·제작비는 별도'}
-  ];
-  var SUPERVISION=100000;
-  var CATS=[
-    {id:'logo',name:'로고',en:'LOGO',desc:'브랜드의 첫인상을 만드는 기본부터, 사용 가이드까지.'},
-    {id:'package',name:'패키지',en:'PACKAGE',desc:'제품에 필요한 포장 유형을 각각 선택하세요.'},
-    {id:'detail',name:'상세페이지',en:'PRODUCT PAGE',desc:'상세페이지 구성을 고르고, 촬영·썸네일은 따로 추가하세요.'},
-    {id:'print',name:'교회 디자인',en:'CHURCH',desc:'필요한 교회 디자인을 고르고, 현장 감리는 따로 선택하세요.'}
-  ];
-  var KAKAO='https://pf.kakao.com/_xjyfNn';
-  var state={logo:null,choices:{},supervision:false},tab='logo';
-  var $=function(id){return document.getElementById(id)};
-  var esc=function(v){return String(v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
-  var nf=new Intl.NumberFormat('ko-KR',{maximumFractionDigits:1});
-  var won=function(n){return new Intl.NumberFormat('ko-KR').format(n)+'원'};
-  var man=function(n,fixed){return n===0?'0원':nf.format(n/10000)+'만 원'+(fixed?'':'~')};
-  var feats=function(a){return '<ul class="est-feats">'+a.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ul>'};
-  var svc=function(id){return SERVICES.filter(function(s){return s.id===id})[0]};
-  var opt=function(s,id){return s.options.filter(function(o){return o.id===id})[0]||s.options[0]};
-
-  function calc(){
-    var lines=[];
-    if(state.logo){var lp=LOGO.plans.filter(function(p){return p.id===state.logo})[0];
-      lines.push({id:'logo',category:'logo',name:'로고',sub:lp.label,amount:lp.price,fixed:false,unit:'브랜드 1개',scope:lp.scope});}
-    SERVICES.forEach(function(s){var c=state.choices[s.id];if(!c)return;var o=opt(s,c.opt);
-      var sub=(s.options.length>1?o.label:'')+(c.quantity>1?(s.options.length>1?' · ':'')+c.quantity+(s.qtyUnit||'종'):'');
-      lines.push({id:s.id,category:s.category,name:s.name,sub:sub,amount:o.price*c.quantity,fixed:!!o.fixed,unit:s.unit,qty:c.quantity,qtyUnit:s.qtyUnit||'종',scope:s.scope});});
-    var printSel=lines.some(function(l){return l.category==='print'});
-    if(state.supervision&&printSel)lines.push({id:'supervision',category:'print',name:'현장 인쇄 감리',sub:'',amount:SUPERVISION,fixed:false,unit:'한 장소 · 한 번 방문 · 2시간 이내',scope:['색상·재질·샘플 확인','인천·서울 지역 기준 · 출장 추가 비용 별도']});
-    var sub=lines.reduce(function(a,l){return a+l.amount},0),vat=Math.round(sub*.1);
-    var fixed=lines.length>0&&lines.every(function(l){return l.fixed});
-    return {lines:lines,sub:sub,vat:vat,total:sub+vat,fixed:fixed,printSel:printSel};
-  }
-  function remove(id){
-    if(id==='logo')state.logo=null;
-    else if(id==='supervision')state.supervision=false;
-    else{delete state.choices[id];
-      if(!SERVICES.some(function(s){return s.category==='print'&&state.choices[s.id]}))state.supervision=false;}
-  }
-  function card(s){
-    var c=state.choices[s.id],o=opt(s,c?c.opt:null),q=c?c.quantity:1,multi=s.options.length>1;
-    var seg=multi?'<div class="est-seg" style="grid-template-columns:repeat('+s.options.length+',1fr)" role="radiogroup" aria-label="'+s.name+' 옵션">'+s.options.map(function(x){
-      return '<label class="'+(o.id===x.id?'on':'')+'" for="est-'+s.id+'-'+x.id+'"><input type="radio" name="est-opt-'+s.id+'" id="est-'+s.id+'-'+x.id+'" value="'+x.id+'" data-opt="'+s.id+'" '+(o.id===x.id?'checked':'')+'>'+x.label+'</label>'}).join('')+'</div>':'';
-    var qty=s.multiple?'<select class="est-qty" id="est-qty-'+s.id+'" data-qty="'+s.id+'" aria-label="'+s.name+' 수량">'+Array.from({length:s.multiple},function(_,i){return i+1}).map(function(n){return '<option value="'+n+'" '+(n===q?'selected':'')+'>'+n+(s.qtyUnit||'종')+'</option>'}).join('')+'</select>':'';
-    var opts=(seg||qty)?'<div class="est-opts">'+seg+qty+'</div>':'';
-    return '<article class="est-card'+(c?' on':'')+(s.options.length>2?' est-wide':'')+'"><div class="est-card-top"><label for="est-choose-'+s.id+'"><input type="checkbox" id="est-choose-'+s.id+'" data-choice="'+s.id+'" '+(c?'checked':'')+'>'+s.name+'</label><span class="est-range">'+man(o.price,o.fixed)+'</span></div>'
-      +'<p class="est-desc">'+esc(s.description)+'</p>'+opts+'<p class="est-unit">단가 기준 · '+esc(s.unit)+'</p>'+feats(s.scope)
-      +'<p class="est-excl"><span>별도</span>'+esc(s.excluded)+'</p></article>';
-  }
-  function grid(cat){return '<div class="est-grid">'+SERVICES.filter(function(s){return s.category===cat}).map(card).join('')+'</div>'}
-  function panel(){
-    var cat=CATS.filter(function(c){return c.id===tab})[0],idx=CATS.indexOf(cat),q=calc();
-    var h='<div class="est-ph"><span class="num">0'+(idx+1)+'</span><div><h3>'+cat.name+'<small>'+cat.en+'</small></h3><p>'+cat.desc+'</p></div></div>';
-    if(tab==='logo'){
-      h+='<div class="est-plans" role="radiogroup" aria-label="로고 서비스 유형">'+LOGO.plans.map(function(p){var on=state.logo===p.id;
-        return '<label for="est-logo-'+p.id+'" class="est-plan'+(on?' on':'')+'"><div class="est-plan-top"><span class="est-tier'+(p.id==='premium'?' pro':'')+'">'+p.label+'</span><input type="radio" id="est-logo-'+p.id+'" name="est-logo" value="'+p.id+'" data-logo '+(on?'checked':'')+'></div>'
-          +'<p class="purpose">'+p.purpose+'</p><p class="price">'+man(p.price)+'<small>브랜드 1개 기준</small></p>'+feats(p.scope)
-          +'<span class="pick">'+(on?'■ 선택됨':p.label+' 선택')+'</span></label>'}).join('')+'</div>'
-        +'<div class="est-deselect"><button type="button" data-remove="logo" '+(state.logo?'':'disabled')+'>로고 선택 해제</button></div>'
-        +'<p class="est-note"><span>두 유형 모두 <b>최종 로고 1개</b>를 완성합니다. 네이밍, 상표 출원, 인쇄·제작비는 별도입니다.</span></p>';
-    }else if(tab==='package'){
-      h+=grid('package')+'<p class="est-note"><span><b>각 항목은 독립된 디자인입니다.</b> 수량은 인쇄 부수가 아닌 제품·디자인 종류 수입니다. 패키지 상품에 패키지 디자인 추가 시 개별 단가의 80%로 진행됩니다.</span></p>';
-    }else if(tab==='detail'){
-      h+=grid('detail')+'<p class="est-note"><span><b>맞춤 브랜딩</b>은 상담 후 견적으로 안내드려요.</span></p>';
-    }else{
-      h+=grid('print')
-        +'<div class="est-sup'+(state.supervision?' on':'')+'"><label for="est-sup"><input type="checkbox" id="est-sup" '+(state.supervision?'checked':'')+' '+(q.printSel?'':'disabled')+'><span><strong>현장 인쇄 감리 추가</strong><small>기본 금액에 미포함</small></span><b>'+man(SUPERVISION)+'</b></label>'
-        +'<p>한 장소 · 1회 방문 · 2시간 이내 / 인천·서울 기준</p><p>색상·재질·샘플을 현장에서 확인합니다. 원거리 출장비, 추가 방문, 인쇄 실비는 별도입니다.</p>'+(q.printSel?'':'<span class="hint">디자인 1종 이상 선택하면 추가할 수 있어요.</span>')+'</div>'
-        +'<p class="est-note"><span><b>교회 디자인 시안은 2종, 무료 수정 2회를 기본제공으로 합니다.</b> 인쇄 부수·종이·후가공·배송·설치 비용은 별도 견적입니다.</span></p>';
-    }
-    return h+'<div class="est-foot"><span>항목마다 옵션과 수량을 선택할 수 있어요.</span><span>디자인비 기준 · 부가세 별도</span></div>';
-  }
-  function summary(){
-    var q=calc(),n=q.lines.filter(function(l){return l.id!=='supervision'}).length,lines;
-    if(q.lines.length){
-      lines=CATS.map(function(c){var it=q.lines.filter(function(l){return l.category===c.id});if(!it.length)return '';
-        return '<div class="est-group"><h4>'+c.en+' · '+c.name+'</h4>'+it.map(function(l){
-          return '<div class="est-line"><div class="est-line-top"><b>'+l.name+(l.sub?'<small>'+esc(l.sub)+'</small>':'')+'</b><button type="button" class="est-x" data-remove="'+l.id+'" aria-label="'+l.name+' 선택 해제">×</button></div>'
-            +'<p class="r">'+man(l.amount,l.fixed)+'</p><details data-line="'+l.id+'"><summary>예상 제공 범위</summary><span class="u">'+esc(l.unit)+(l.qty>1?' × '+l.qty+l.qtyUnit:'')+'</span><ul>'+l.scope.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ul></details></div>'}).join('')+'</div>';}).join('');
-    }else lines='<div class="est-empty"><span class="px3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><b>어떤 디자인이 필요하세요?</b><span>항목을 선택하면 구성과 금액이<br>여기에 차곡차곡 담겨요.</span></div>';
-    return '<div class="est-sum-head"><div><span class="k">YOUR ESTIMATE</span><h3>선택한 구성<span>'+n+'</span></h3></div><button type="button" class="est-reset" data-reset aria-label="모든 선택 초기화" '+(q.lines.length?'':'disabled')+'>초기화</button></div>'
-      +'<div class="est-lines">'+lines+'</div>'
-      +'<div class="est-totals"><p class="lbl">예상 합계<span>부가세 별도</span></p><p class="big">'+man(q.sub,q.fixed)+'</p><div class="est-tax"><span>부가세 10%</span><span>'+man(q.vat,q.fixed)+'</span></div><div class="est-tax inc"><span>부가세 포함</span><strong>'+man(q.total,q.fixed)+'</strong></div><p class="est-warn">인쇄·제작 실비와 별도 비용은 합계에 포함되지 않습니다.</p></div>'
-      +'<div class="est-sum-foot">상담 전 참고 금액입니다.<br>자료·규격·수량·작업 난이도에 따라 최종 견적이 달라집니다.<a href="'+KAKAO+'" target="_blank" rel="noopener" class="btn">이 구성으로 상담하기 →</a></div>';
-  }
-  function render(){
-    var q=calc(),fid=document.activeElement&&document.activeElement.id;
-    var opened=[].slice.call(document.querySelectorAll('#estSum details[open]')).map(function(d){return d.dataset.line});
-    $('estTabs').innerHTML=CATS.map(function(c){var n=q.lines.filter(function(l){return l.category===c.id&&l.id!=='supervision'}).length;
-      return '<button type="button" id="est-tab-'+c.id+'" class="est-tab" role="tab" aria-selected="'+(tab===c.id)+'" aria-controls="estPanel" tabindex="'+(tab===c.id?0:-1)+'" data-tab="'+c.id+'"><span class="en">'+c.en+'</span><span class="ko">'+c.name+'</span>'+(n?'<span class="cnt">'+n+'</span>':'')+'</button>'}).join('');
-    $('estPanel').setAttribute('aria-labelledby','est-tab-'+tab);
-    $('estPanel').innerHTML=panel();
-    $('estSum').innerHTML=summary();
-    opened.forEach(function(id){var d=$('estSum').querySelector('details[data-line="'+id+'"]');if(d)d.open=true;});
-    var cnt=q.lines.filter(function(l){return l.id!=='supervision'}).length;
-    $('estMPrice').textContent=man(q.sub,q.fixed);$('estMCount').textContent=cnt;
-    if(fid&&$(fid))$(fid).focus({preventScroll:true});
-    $('estLive').textContent='선택 '+cnt+'개, 예상 합계 '+won(q.sub)+(q.fixed?'':'부터')+', 부가세 별도';
-  }
-  function choose(id,o,qty){state.choices[id]={opt:o,quantity:qty};render();}
-  var root=$('estimate');
-  root.addEventListener('change',function(e){
-    var el=e.target,c;
-    if(el.hasAttribute('data-logo')){state.logo=el.value;render();}
-    else if(el.dataset.choice){var id=el.dataset.choice;if(el.checked)choose(id,svc(id).options[0].id,1);else{remove(id);render();}}
-    else if(el.dataset.opt){c=state.choices[el.dataset.opt];choose(el.dataset.opt,el.value,c?c.quantity:1);}
-    else if(el.dataset.qty){c=state.choices[el.dataset.qty];choose(el.dataset.qty,c?c.opt:svc(el.dataset.qty).options[0].id,Number(el.value));}
-    else if(el.id==='est-sup'){state.supervision=el.checked;render();}
-  });
-  root.addEventListener('click',function(e){
-    var b=e.target.closest('button');if(!b||b.disabled)return;
-    if(b.dataset.tab){tab=b.dataset.tab;render();}
-    else if(b.dataset.remove){remove(b.dataset.remove);render();}
-    else if(b.hasAttribute('data-reset')){state={logo:null,choices:{},supervision:false};render();}
-  });
-  root.addEventListener('keydown',function(e){
-    var t=e.target;if(!t.dataset||!t.dataset.tab||['ArrowLeft','ArrowRight','Home','End'].indexOf(e.key)<0)return;
-    e.preventDefault();var i=CATS.map(function(c){return c.id}).indexOf(tab);
-    tab=CATS[e.key==='Home'?0:e.key==='End'?3:(i+(e.key==='ArrowRight'?1:3))%4].id;render();$('est-tab-'+tab).focus();
-  });
-  $('estRateNote').textContent=RATE_NOTE;
-  render();
-})();
 </script>
 </body>
 </html>
